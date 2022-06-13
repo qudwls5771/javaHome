@@ -1,8 +1,7 @@
-package studyJava0613;
 import java.util.Scanner; //import는 객체를 불러옴
 
 
-public class ScannerEX {
+class ScannerEX {
     
     public static void main(String[] args){
         System.out.println("이름, 도시, 나이, 체중, 독신 여부를 빈칸으로 분리하여 입력하세요.");
