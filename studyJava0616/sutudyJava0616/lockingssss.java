@@ -26,31 +26,31 @@ public class lockingssss {
                 }
             }
             for(int j =0; j<lock.length; j++){
-                System.out.println("lock"+Arrays.deepToString(locking));
+                System.out.println("locking"+Arrays.deepToString(locking));
             }
 
             //자물쇠 위치를 찾는다? 맞나?
             for(int i =0; i<lockY; i++){
                 for(int j =0; j<lockY; j++){
 
+
+                    //열쇠 + 자물쇠 돌린다?
+                    for(int k = 0; k < keyX; k++){
+                        for(int p = 0; p <keyX; p++){
+                            locking[i+k][j+p] = locking[i+k][j+p] + key[i][j];
+                        }
+                    }
+
                 }
             }
 
+            System.out.println("열쇠 + 자물쇠" + Arrays.deepToString(locking));
 
             //key값에 = typoon(key)메소드를 넣는다.
             for(int k = 0; k<4; k++){
                 key = typoon(key);
             }
             System.out.println("키 값:"+key);
-
-            
-
-
-
-
-
-
-
 
         return answer;
     }
@@ -78,7 +78,6 @@ public class lockingssss {
                             count++; 
                         }
                     }
-                    System.out.println("홀값 :"+hole);
                 }
                 return count == hole;  
             }
