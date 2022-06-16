@@ -35,6 +35,7 @@ public class lockingssss {
             for(int k = 0; k<4; k++){
                 key = typoon(key);
             }
+            System.out.println(key);
 
 
         return answer;
