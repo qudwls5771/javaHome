@@ -4,8 +4,9 @@ public class main {
     
     public static void main(String args[]){
         // 인스턴스 생성
-        // 스택    , 힙
+        // 스택    , 힙 = 둘이 연결해주는 것은 주소.
         Car myCar = new Car();
+
 
         // 인스턴스 내용 출력
         System.out.println(" : " + myCar.company);
