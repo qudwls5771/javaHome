@@ -1,5 +1,4 @@
 
-
 class PointXY{
     private int x;
     private int y;
