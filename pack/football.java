@@ -54,6 +54,7 @@ public class football {
                 //charAt()은 문자열을 이용해서 문자하나하나 검사한다.
                 if(fp[fp2].charAt(j) != in.charAt(j)){
                     no++;//틀릴경우 증가
+                    System.out.println("몇개 증가하냐" + no);
                 }
             }
             //문자 정답길이 Math = 수학관련 객체 , abs = 인자값에 대한 절대값을 반환
