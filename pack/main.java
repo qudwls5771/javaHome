@@ -1,4 +1,4 @@
-
+import pack.*;
 
 public class main {
     public static void main(String args[]){
@@ -19,12 +19,8 @@ public class main {
 
     }
 
-    private static int getY() {
-        return 100;
-    }
+ 
 
-    private static int getX() {
-        return 100;
-    }
+ 
     
 }

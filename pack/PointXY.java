@@ -1,4 +1,5 @@
 
+
 class PointXY{
     private int x;
     private int y;
@@ -22,11 +23,13 @@ class PointXY{
         this.y = y;
     }
 
+
+
     public int getX(){
         return this.x;
     }
 
-    public int getY(){
+    public  int getY(){
         return this.y;
     }
 
