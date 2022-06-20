@@ -40,14 +40,8 @@ public class main {
         cyc = in.length();
 
         while(true){
-            for(int i =0; i<com.length(); i++){
-                System.out.println(com);
-                if(in.equals("x")){
-                    System.out.println("종료");
-                    break;
-                }
-            }
-
+            System.out.println("컴퓨터를 선택해주세요!");
+            
         }
       
 
