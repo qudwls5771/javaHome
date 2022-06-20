@@ -22,18 +22,7 @@ public class main {
         
         String com = computer.comP();
       
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("모델을 골라주세요!");
-        String input_N = scanner.nextLine();
-        
-        System.out.println("CPU를 골라주세요!");
-        String input_C = scanner.nextLine();
-
-        System.out.println("RAM을 골라주세요!");
-        String input_R = scanner.nextLine();
-
-        System.out.println("SSD를 골라주세요!");
-        String input_S = scanner.nextLine();
+  
 
         String in = scanner.nextLine();
         int cyc =0;
@@ -41,6 +30,18 @@ public class main {
 
         while(true){
             System.out.println("컴퓨터를 선택해주세요!");
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("모델을 골라주세요!");
+            String input_N = scanner.nextLine();
+            
+            System.out.println("CPU를 골라주세요!");
+            String input_C = scanner.nextLine();
+    
+            System.out.println("RAM을 골라주세요!");
+            String input_R = scanner.nextLine();
+    
+            System.out.println("SSD를 골라주세요!");
+            String input_S = scanner.nextLine();
             
         }
       
