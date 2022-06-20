@@ -8,9 +8,15 @@ public class Server {
 
     public static void main(String[] args){
         try {
+<<<<<<< Updated upstream
             int socket = 1234;
             ServerSocket severSocket = new ServerSocket(socket);
             System.out.println("Socket : " + socket + "으로 서버가 열렸습다.");
+=======
+            int socketPort = 1234;
+            ServerSocket severSocket = new ServerSocket("1");
+            System.out.println("Socket : " + socketPort  + "으로 서버가 열렸습다.");
+>>>>>>> Stashed changes
 
 
             //소켓이 서버가 종료 될때까지 반복

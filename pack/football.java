@@ -12,7 +12,7 @@ public class football {
         int fp1[] = new int[5];
         //정확도 수치(틀린 문자개수)
         int no = 0; 
-        //지단어 글자 수가 더 작은 것을 기준으로 비교해주는 변수를 설정
+        //단어 글자 수가 더 작은 것을 기준으로 비교해주는 변수를 설정
         int cyc =0;
         System.out.println("축구선수들의 별명?을 보고 이름을 맞추시오!!!!!! \n");
         
@@ -59,6 +59,8 @@ public class football {
             }
             //문자 정답길이 Math = 수학관련 객체 , abs = 인자값에 대한 절대값을 반환
             no = no+Math.abs(in.length() - fp[fp2].length());
+            System.out.println("여기는?"+no);
+
 
         }
 
