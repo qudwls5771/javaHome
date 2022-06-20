@@ -1,4 +1,4 @@
-
+package PACK;
 
 class PointXY{
     private int x;
@@ -22,8 +22,6 @@ class PointXY{
         this.x = x;
         this.y = y;
     }
-
-
 
     public int getX(){
         return this.x;

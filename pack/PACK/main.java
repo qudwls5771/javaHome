@@ -1,4 +1,6 @@
-import pack.*;
+package PACK;
+
+import PACK.*;
 
 public class main {
     public static void main(String args[]){
@@ -14,13 +16,16 @@ public class main {
         //실행4
         point.moveXY(50,50);
 
-        System.out.println(getX() + " " + getY()) ;
+        System.out.println(point.getX() + " " + point.getY()) ;
 
 
     }
 
- 
 
- 
+
+
+
+  
+
     
 }

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "PACK.main",
+            "projectName": "javaHome_2e5fed7f"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

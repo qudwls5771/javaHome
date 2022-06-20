@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class football {
     public static void main(String[] args) {
-        String fpn[] = { "날강두", "패스마스터는?", "알리바바와 40인의 도적", "씰룩썔룩 웃고있는", "21세기 정통 스트라이커" };
-        String fp[] = { "호날두", "알론소", "알라바", "마르셀루", "레반도프스키" };
+        String[] fpn = { "날강두", "패스마스터는?", "알리바바와 40인의 도적", "씰룩썔룩 웃고있는", "21세기 정통 스트라이커" };
+        String[] fp = { "호날두", "알론소", "알라바", "마르셀루", "레반도프스키" };
         Scanner scanner = new Scanner(System.in);
         Random r = new Random();
 
@@ -47,7 +47,7 @@ public class football {
             for (int j = 0; j < cyc; j++) {
                 // charAt()은 문자열을 이용해서 문자하나하나 검사한다.
                 if (fp[fp2].charAt(j) != in.charAt(j)) {
-                    // 문자 정답길이 Math = 수학관련 객체 , abs = 인자값에 대한 절대값을 반환
+                    // 문자 정답길이 Mathㄹㅇ = 수학관련 객체 , abs = 인자값에 대한 절대값을 반환
                     no = no + Math.abs(in.length() - fp[fp2].length());
                     no++;// 틀릴경우 증가
                 }
