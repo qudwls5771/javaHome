@@ -13,26 +13,31 @@ public class Computer {
         //배열, if문, for문 복합적으로 쓰시면 어떨까요?
         //Scanner로 데이터를 받아옵니다.
 
-    public static final String Computers = null;
-    private String noteBook = "맥북pro 2021";
-    private String[] cpu;
-    private String[] ram;
-    private String[] ssd;
+    
+    public String mBook = "맥북pro2021";
+    public String cpu = "M1PRO";
+    public String ram = "16GB";
+    public String ssd = "512GB";
 
     public Computer(){
+     
+    }
+    
+    public Computer(String mBook_, String cpu_, String ram_, String ssd_){
+        this.mBook = mBook_;
+        this.cpu = cpu_;
+        this.ram = ram_;
+        this.ssd = ssd_;
+    }
+
+    public String comP(){
+        System.out.println(this.mBook + " " +this.cpu+ " " + this.ram+ " " + this.ssd);
+        return mBook;
 
     }
 
-    public void Computer(String[] cpu_j, String[] ram_j ,String[] ssd_j){
-        this.cpu =cpu_j;
-        this.ram =ram_j;
-        this.ssd =ssd_j;
 
-    }
-
-
-
-
-
+    
+  
     
 }

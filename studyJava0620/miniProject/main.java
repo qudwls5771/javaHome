@@ -16,25 +16,42 @@ public class main {
         //배열, if문, for문 복합적으로 쓰시면 어떨까요?
         //Scanner로 데이터를 받아옵니다.
 
-      
-         
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("cpu 성능을 입력해주세요!");
-        String input_Cpu = input.nextLine();
-
-        System.out.println("Ram에 대해서 입력해주세요!");
-        String input_Ram = input.nextLine();
-
-        System.out.println("SSD에 대해서 입력해주세요!");
-        String input_SSD = input.nextLine();
-
-        System.out.println("CPu" + input_Cpu + "RAM"+ input_Ram + "SSD" + input_SSD);
-
-
-    
+        
         Computer computer = new Computer();
+        
+        String com = computer.comP();
+      
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("모델을 골라주세요!");
+        String input_N = scanner.nextLine();
+        
+        System.out.println("CPU를 골라주세요!");
+        String input_C = scanner.nextLine();
 
+        System.out.println("RAM을 골라주세요!");
+        String input_R = scanner.nextLine();
+
+        System.out.println("SSD를 골라주세요!");
+        String input_S = scanner.nextLine();
+
+        String in = scanner.nextLine();
+        int cyc =0;
+        cyc = in.length();
+
+        while(true){
+            for(int i =0; i<com.length(); i++){
+                System.out.println(com);
+                if(in.equals("x")){
+                    System.out.println("종료");
+                    break;
+                }
+            }
+
+        }
+      
+
+        
 
         
     }
