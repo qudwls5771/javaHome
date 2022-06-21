@@ -25,9 +25,6 @@ public class ComP {
     public ComP(){
 
     }
-
-
-
     public String getNoteB(){
         return noteB;
     }
