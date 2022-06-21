@@ -1,10 +1,12 @@
 package packg;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class selectOne {
-    public void selectAll() {
+    protected static void selectOne() {
         Scanner sc = new Scanner(System.in);
+        ArrayList<ComP> comList = new ArrayList<ComP>();
         while (true) {
             System.out.println("검색할 Mac의 이름을 입력해주세요!");
             String name = sc.nextLine();
@@ -12,10 +14,10 @@ public class selectOne {
             for (int i = 0; i < comList.size(); i++) {
                 if (name.equals(comList.get(i).getNoteB())) {
                     System.out.println("-----------------------");
-                    System.out.println("Mac : " + comList.get(i).getNoteB);
-                    System.out.println("CPU : " + comList.get(i).getCpu);
-                    System.out.println("RAM : " + comList.get(i).getram);
-                    System.out.println("SSD : " + comList.get(i).getssd);
+                    System.out.println("Mac : " + comList.get(i).getNoteB());
+                    System.out.println("CPU : " + comList.get(i).getCpu());
+                    System.out.println("RAM : " + comList.get(i).getram());
+                    System.out.println("SSD : " + comList.get(i).getssd());
                     System.out.println("-----------------------\n");
                     count++;
                     break;
@@ -30,5 +32,7 @@ public class selectOne {
             
         }
     }
+
+   
 
 }
