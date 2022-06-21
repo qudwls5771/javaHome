@@ -33,20 +33,15 @@ public class slime{
         System.out.println(this.name+"은 " + 10 + " 공격을 했습니다.");
         return 10;
     }
+
+    
+    public void info(){
+        System.out.println("________" + name + "________");
+        System.out.println("HP : "+this.hp);
+        System.out.println("MP : "+this.mp);
+    }
 }
 
-    public class Warrior{
-        public String name;
-        public int hp;
-        public int mp;
 
-        public Warrior(String input_name, int hp, int mp){
 
-        }
-
-        public int att_a(){
-            this.mp = this.mp - 10;
-            return 30;
-        }
-
-    }
+    

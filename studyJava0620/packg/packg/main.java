@@ -1,11 +1,13 @@
 package packg;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
-        ComP comp = new ComP();
+        
         
         while (true) {
             System.out.println("(1) Mac등록 \t (2) 전체 조회\t (3) 상세 조회\t (0) 종료");
@@ -37,28 +39,27 @@ public class main {
 
     private static void insertCom() {
         while(true){
+            ArrayList <ComP> list = new ArrayList<ComP>();
             Scanner sc = new Scanner(System.in);
-            ComP comp = new ComP();
-            System.out.println("Mac을 등록해주세요.");
-            comp.setNoteB(sc.nextLine());
-            System.out.println("CPU를 입력하세요!");
-            comp.setCpu(sc.nextLine());
-            System.out.println("RAM를 입력하세요!");
-            comp.setram(sc.nextLine());
-            System.out.println("SSD를 입력하세요!");
-            comp.setssd(sc.nextLine());
 
-            System.out.println("Mac : " + comp.getNoteB());
-            System.out.println("CPU : " + comp.getCpu());
-            System.out.println("RAM : " + comp.getram());
-            System.out.println("SSD : " + comp.getssd());
-    
+            
+            System.out.println("Mac을 등록해주세요.")   ;
+            String noteB = sc.nextLine();
+            System.out.println("CPU를 입력하세요!");
+            String cpu = sc.nextLine();
+            System.out.println("RAM를 입력하세요!");
+            String ram = sc.nextLine();
+            System.out.println("SSD를 입력하세요!");
+            String ssd = sc.nextLine();
+            ComP comp = new ComP(noteB, cpu, ram, ssd);
+           
             System.out.println("입력한 내용을 저장? Y, N");
             String save = sc.nextLine();
             //equalsIgnoreCase : 대소문자 구분안함.
             //equals : 대소문자 구분함.
             if(save.equalsIgnoreCase("y")){
-                comp.comList.add(comp);
+                list.add(comp);
+                System.out.println("Mac "+noteB + " CPU " +cpu + " RAM " + ram + " SSD " +ssd);
                 System.out.println("저장완료!");
                 break;
             }else if(save.equalsIgnoreCase("n")){
@@ -70,17 +71,17 @@ public class main {
 
     private static void selectAll() {
         while(true){
-            ComP comp = new ComP();
+            ArrayList <ComP> list = new ArrayList<ComP>();
             Scanner sc = new Scanner(System.in);
             
             
-            System.out.println("컴퓨터 목록" + comp.comList.size());
-            for(int i =0; i<comp.comList.size(); i++){
+            System.out.println("컴퓨터 목록" + list.size());
+            for(int i =0; i<list.size(); i++){
                 System.out.println("-----------------------");
-                System.out.println("Mac : " + comp.comList.get(i).getNoteB());
-                System.out.println("CPU : " + comp.comList.get(i).getCpu());
-                System.out.println("RAM : " + comp.comList.get(i).getram());
-                System.out.println("SSD : " + comp.comList.get(i).getssd());
+                System.out.println("Mac : " + );
+                System.out.println("CPU : " + );
+                System.out.println("RAM : " + );
+                System.out.println("SSD : " + );
                 System.out.println("-----------------------\n");
             }
     
@@ -96,7 +97,6 @@ public class main {
     }
 
     private static void selectOne() {
-        ComP comp = new ComP();
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("검색할 Mac의 이름을 입력해주세요!");

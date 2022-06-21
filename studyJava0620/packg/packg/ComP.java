@@ -4,7 +4,8 @@ package packg;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class ComP {
-        //김준석 선생님은 컴퓨터를 사고 싶다.
+        public static Object list;
+    //김준석 선생님은 컴퓨터를 사고 싶다.
         //프로그래밍으로 사고 싶은 컴퓨터의 성능지표를 출력하는 시스템을 개발하고 싶다.
         //데이터를 받아오고, 그 데이터를 통해 컴퓨터의 성능을 출력하는 시스템 개발
         //컴퓨터 이름(맥북pro 2021)
@@ -22,9 +23,15 @@ public class ComP {
     private String ssd;
     ArrayList<ComP> comList = new ArrayList<ComP>();
 
-    public ComP(){
+    public ComP(String noteB,String cpu, String ram, String ssd ){
+        this.noteB = noteB;
+        this.cpu = cpu;
+        this.ram = ram;
+        this.ssd = ssd;
 
     }
+
+    
     public String getNoteB(){
         return noteB;
     }
