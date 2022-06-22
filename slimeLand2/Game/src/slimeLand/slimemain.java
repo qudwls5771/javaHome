@@ -23,14 +23,14 @@ public class slimemain {
         monster[] monsters = { slimeRed, ghost, beast };
         // 캐릭터 선택창
 
-        while (run) {
-            System.out.println("-----------------몬스터 잡기-------------------");
-            System.out.println("---------------캐릭터 선택(번호)---------------");
-            System.out.println("---------1. 전사 | 2. 마법사 | 3. 종료---------");
-            System.out.println("-----------------------------------------------");
-            System.out.print("선택:");
+        System.out.println("-----------------몬스터 잡기-------------------");
+        System.out.println("---------------캐릭터 선택(번호)---------------");
+        System.out.println("---------1. 전사 | 2. 마법사 | 3. 종료---------");
+        System.out.println("-----------------------------------------------");
+        System.out.print("선택:");
+        int choice = sc.nextInt();
 
-            int choice = sc.nextInt();
+        while (run) {
             // 게임종료
             if (choice == 3) {
                 while (true) {
@@ -60,55 +60,91 @@ public class slimemain {
                 sc.nextLine();
                 System.out.println("----------------------몬스터 등장---------------------");
                 slimeRed.info();
-                ghost.info();
-                beast.info();
                 sc.nextLine();
                 System.out.println("-----------------------------------------------------");
                 System.out.println("1. 기본공격 2. 스킬 3. 인벤토리 4. 도망가기");
 
                 int choice1 = sc.nextInt();
-                while (run1) {
-
-                    if (choice1 == 1) {
-                        while (true) {
+                
+                if (slimeRed.hp > 0) {
+                    while (run1) {
+                        if (choice1 == 1) {
                             System.out.println("-------------------!!!WarriorAttack!!!------------------");
                             slimeRed.dmg(warrior01.BasicAttack());
                             slimeRed.info();
-                            
-                            
+    
                             System.out.println("-------------------!!!MonsterAttack!!!-----------------");
                             warrior01.dmg(slimeRed.att());
                             warrior01.info();
                             break;
-/* 
-                            if (slimeRed.hp > 0) {
-
-                            } else if (slimeRed.hp < 1) {
-                                System.out.println("슬라임 잡기 성공!");
-                                break;
-                            }
-                            if (warrior01.hp > 0) {
-
-                            } else if (warrior01.hp < 0) {
-                                System.out.println("GAME OVER");
-                                break;
-                            }
-                            if (ghost.hp < 1) {
-                                System.out.println("고스트 잡기 성공!");
-                            } else if (ghost.hp > 0) {
-
-                            }
-
-                            else if (choice1 == 2) {
-
-                                slimeRed.info();
-                            } */
-
                         }
                     }
-
+                } else if (slimeRed.hp < 1) {
+                    System.out.println("슬라임 잡기 성공!");
+                    break;
+                }
+                if (warrior01.hp > 0) {
+                    while (run1) {
+                        if (choice1 == 1) {
+                            System.out.println("-------------------!!!WarriorAttack!!!------------------");
+                            slimeRed.dmg(warrior01.BasicAttack());
+                            slimeRed.info();
+    
+                            System.out.println("-------------------!!!MonsterAttack!!!-----------------");
+                            warrior01.dmg(slimeRed.att());
+                            warrior01.info();
+                            break;
+                        }
+                    }
+                } else if (warrior01.hp < 0) {
+                    System.out.println("GAME OVER");
+                    break;
                 }
 
+                
+                if (choice == 2) {
+                    System.out.println("-------------마법사 선택 하셨습니다--------------");
+                    magiction01.info();
+                    sc.nextLine();
+                    System.out.println("------------------몬스터 등장--------------------");
+                    slimeRed.info();
+                    ghost.info();
+                    beast.info();
+                    sc.nextLine();
+                    System.out.println("------------------------------------------------");
+                    System.out.println("1. 기본공격 2. 스킬 3. 인벤토리 4. 도망가기");
+
+                    if (choice1 == 1) {
+                        System.out.println("----------!!!MagictionAttack!!!----------");
+                        slimeRed.dmg(magiction01.BasicAttack());
+                        slimeRed.info();
+                        ghost.dmg(magiction01.BasicAttack());
+                        ghost.info();
+
+                        System.out.println("----------!!!MonsterAttack!!!----------");
+                        warrior01.dmg(slimeRed.att());
+                        warrior01.info();
+                        if (slimeRed.hp > 0) {
+
+                        } else if (slimeRed.hp < 1) {
+                            System.out.println("슬라임 잡기 성공!");
+                            break;
+                        }
+                        if (warrior01.hp > 0) {
+
+                        } else if (warrior01.hp < 1) {
+                            System.out.println("GAME OVER");
+                            break;
+                        }
+
+                    }
+                }
+                if (choice == 3) {
+
+                }
+                if (choice == 4) {
+
+                }
             }
         }
     }

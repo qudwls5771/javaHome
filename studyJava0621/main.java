@@ -29,21 +29,14 @@ public class main {
             int input_mp = 3;
 
      
-            slime slime_test = new slime();
-     /*        slime_test.info();
-            slime_test.dmg(slime_test.hit());
-            slime_test.info();
-            slime_test.die();  */
+            
+            dogM dogm = new dogM(input_name_4, 1, 10, 10, 100000000);
+            dogm.info();
+            dogm.dmg(dogm.hit());
+            //slime_test.info();
+            //slime_test.die();  
            
 
-
-
-
-                while(true){
-
-                
-                    
-                }
             
 
 

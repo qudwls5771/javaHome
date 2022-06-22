@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class monster {
     //필드값 (슬라임의 hp, mp...)
-
+    Warrior01 warrior01 = new Warrior01();
     public String name;
     public int hp;
     public int mp;
@@ -40,7 +40,8 @@ public class monster {
         System.out.println("mp = " + mp);
     }
 
-    public void death() {
-        System.out.println(this.name + "는(은) 쓰러졌다!");
-    }
+
+
+
+    
 }
