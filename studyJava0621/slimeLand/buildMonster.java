@@ -8,9 +8,28 @@ public class buildMonster {
 
         switch(){
             case 1:
-                slimes.slime();
+                
             break;
+
+            case 2:
+
+            break;
+
+            case 3:
+
+            break;
+
+            case 4:
+
+            break;
+
+            case 5:
+
+            break;
+
         }
     }
+
+    
     
 }
