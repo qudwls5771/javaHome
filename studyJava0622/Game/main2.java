@@ -14,7 +14,6 @@ public class main2 {
 			player2.attacks(player);
 			cnt++;
 			if(cnt==3) {
-				sc.nextLine();
 				player2.Heals();
 				cnt=0;
 			}
