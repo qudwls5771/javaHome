@@ -9,6 +9,9 @@ public class slime {
     public int hp;
     public int mp;
     public int hit;
+    public int amor;
+
+
 
     // 생성자 (슬라임 클래스를 인스턴스로 만들 때 매개변수를 받아서 객체 만들기)
     public slime() {
@@ -16,25 +19,27 @@ public class slime {
         this.hp = 10;
         this.mp = 0;
         this.hit = 0;
+        this.amor = 0;
 
     }
 
-    public slime(String input_name, int input_hp, int input_mp, int input_hit) {
-        this.name = input_name;
-        this.hp = input_hp;
-        this.mp = input_mp;
-        this.hit = input_hit;
+    public slime(String name, int hp, int mp, int hit, int amor) {
+        this.name = name;
+        this.hp = hp;
+        this.mp = mp;
+        this.hit = hit;
+        this.amor = amor;
 
     }
 
     public void dmg(int dmg) {
-        this.hp = this.hp - dmg;
-        if (dmg > 0) {
-            System.out.println(this.name + "은 " + dmg + "의 공격을 받았습니다.");
-        } else {
-
+        int am_dm = this.amor - dmg;
+        if(amor > dmg){
+            System.out.println(this.name + "은 " + "miss");
+        }else if (dmg > amor){
+            this.hp = this.hp - Math.abs(am_dm);
+            System.out.println(this.name + "은 " + am_dm + "의 공격을 받았습니다.");
         }
-
     }
 
     public void info() {
@@ -42,6 +47,7 @@ public class slime {
         System.out.println("Name = " + this.name);
         System.out.println("HP = " + this.hp);
         System.out.println("MP = " + this.mp);
+        System.out.println("MP = " + this.amor);
     }
 
     public int hit() {
@@ -61,6 +67,7 @@ public class slime {
     public void die() {
         if (this.hp <= 0) {
             System.out.println(this.name + "이/가 죽었습니다.");
+            this.hp=0;
         } else {
             System.out.println("없음");
 
