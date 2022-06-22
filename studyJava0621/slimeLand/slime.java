@@ -58,7 +58,7 @@ public class slime {
     }
 
     // 죽을 경우에 드랍
-    public void die(int hp) {
+    public void die() {
         if (this.hp <= 0) {
             System.out.println(this.name + "이/가 죽었습니다.");
         } else {
@@ -66,4 +66,21 @@ public class slime {
 
         }
     }
+
+    public boolean isLives(){
+        if(hp <=0){
+            return false;
+        }else{
+            return true;
+        }
+
+
+    }
+
+   
+   //몬스터도 인벤토리 같은 걸 만들어서 그 안에 아이템이 들어있는데 그 중에 랜덤값으로 드랍하게 한다.
+   //1. 일반 공격 2. 스킬  3. 포션 빨기 4. 도망가기
+
+
+    
 }

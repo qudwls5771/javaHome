@@ -39,7 +39,7 @@ public class main {
             slime slime_test = new slime();
             
             // slime_A.info();
-            slime_test.info();
+              slime_test.info();
 
             // slime slime_B = new slime();
 
@@ -51,9 +51,10 @@ public class main {
             // System.out.println("공격받은 slime_B: " + slime_B.mp);
 
             // 용사의 공격(1턴)
-            slime_test.dmg(slime_test.hit());
-            slime_test.info();
-            // slime_test.die();
+             slime_test.dmg(slime_test.hit());
+             slime_test.info();
+             slime_test.die(); 
+           
 
             // 용사가 죽을 경우
 
@@ -66,19 +67,24 @@ public class main {
         // }
     }
 
-    public void slimes(String name){
+    public static String[] slimes(){
         //슬라임 종류
         Random r = new Random();
         String[] slime_s = {"파란 슬라임", "빨간 슬라임", "노랑 슬라임", "핑크 슬라임", "초록 슬라임", "아이스 슬라임"};
         int[] slime_sava = new int[6];
         for(int i = 0; i <slime_s.length; i++){
             int slime_c = r.nextInt(slime_s.length);
+            //중복 제거 if문
             if(slime_sava[slime_c] ==1){
                 i--;
+                //중복 나오면 다시 돌아가기?
                 continue;
             }else {
+                //중복 안나오면 나옴
                 slime_sava[slime_c] = 1;
             }
         }
+        return slime_s;
     }
+    
 }
