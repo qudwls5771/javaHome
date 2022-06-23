@@ -14,29 +14,94 @@ public class main {
         System.out.println("용사를 정해주세요");
         // 키보드 입력값을 input 변수에 할당
         input = scan.nextLine();
+                
+       
+       
+            ArrayList<String> name_S = new ArrayList<>();
+            name_S.add("노란 슬라임");
+            name_S.add("빨간 슬라임");
+            name_S.add("파랑 슬라임");
+            name_S.add("초록 슬라임");
+            name_S.add("검은 슬라임");
+            ArrayList<String> name_D = new ArrayList<>();
+            name_D.add("노란 개");
+            name_D.add("빨간 개");
+            name_D.add("파랑 개");
+            name_D.add("초록 개");
+            name_D.add("검은 개");
+            ArrayList<String> name_B = new ArrayList<>();
+            name_B.add("노란 새");
+            name_B.add("빨간 새");
+            name_B.add("파랑 새");
+            name_B.add("초록 새");
+            name_B.add("검은 새");
+            ArrayList<String> name_G = new ArrayList<>();
+            name_G.add("노란 고릴라");
+            name_G.add("빨간 고릴라");
+            name_G.add("파랑 고릴라");
+            name_G.add("초록 고릴라");
+            name_G.add("검은 고릴라");
+            ArrayList<String> name_T = new ArrayList<>();
+            name_T.add("노란 호랑이");
+            name_T.add("빨간 호랑이");
+            name_T.add("파랑 호랑이");
+            name_T.add("초록 호랑이");
+            name_T.add("검은 호랑이");
 
-        Warrior warrior = new Warrior(input, 1000, 5000);
+
+            int index_D = (int)(Math.random() * (name_D.size()-1));
+            int index_S = (int)(Math.random() * (name_S.size()-1));
+            int index_B = (int)(Math.random() * (name_B.size()-1));
+            int index_G = (int)(Math.random() * (name_G.size()-1));
+            int index_T = (int)(Math.random() * (name_T.size()-1));
 
 
+            Warrior warrior = new Warrior(input, 1000, 5000);
             warrior.info();
-
-      
-            String input_name_1 = "노란 슬라임";
-            String input_name_2 = "빨간 슬라임";
-            String input_name_3 = "초록 슬라임";
-            String input_name_4 = "파란 슬라임";
-            int input_hp = 30;
-            int input_mp = 3;
-
-     
             
-            dogM dogm = new dogM(input_name_4, 1, 10, 10, 100000000);
-            dogm.info();
-            dogm.dmg(dogm.hit());
-            //slime_test.info();
-            //slime_test.die();  
-           
+            int count =1;
+            
+            while(true){
+                scan.nextLine();
 
+                switch(count){
+                    case 1 :
+                    slime slimes = new slime(name_S.get(index_S), 10, 0, 10, 0);
+                    slimes.info();
+                    slimes.dmg(slimes.hit());
+                    count++;
+                    break;
+                    
+                    case 2 :
+                    dogM dogm = new dogM(name_D.get(index_D), 10, 10, 10, 10);
+                    dogm.info();
+                    dogm.dmg(dogm.hit());
+                    count++;
+                    break;
+
+                    case 3 :
+                    birdM birdm = new birdM(name_B.get(index_B), 20, 0, 20, 25);
+                    birdm.info();
+                    birdm.dmg(birdm.hit());
+                    count++;
+                    break;
+                    
+                    case 4 :
+                    gorillaM gorillam = new gorillaM(name_G.get(index_G), 30, 0, 30, 30);
+                    gorillam.info();
+                    gorillam.dmg(gorillam.hit());
+                    count++;
+                    break;
+
+                    case 5 :
+                    tigerM tigerm = new tigerM(name_T.get(index_T), 40, 0, 40, 40);
+                    tigerm.info();
+                    tigerm.dmg(tigerm.hit());
+                    count++;
+                    break;
+
+                }
+            }
             
 
 
@@ -49,24 +114,6 @@ public class main {
         
     }
 
-    public static String[] slimes(){
-        //슬라임 종류
-        Random r = new Random();
-        String[] slime_s = {"파란 슬라임", "빨간 슬라임", "노랑 슬라임", "핑크 슬라임", "초록 슬라임", "아이스 슬라임"};
-        int[] slime_sava = new int[6];
-        for(int i = 0; i <slime_s.length; i++){
-            int slime_c = r.nextInt(slime_s.length);
-            //중복 제거 if문
-            if(slime_sava[slime_c] ==1){
-                i--;
-                //중복 나오면 다시 돌아가기?
-                continue;
-            }else {
-                //중복 안나오면 나옴
-                slime_sava[slime_c] = 1;
-            }
-        }
-        return slime_s;
-    }
+
     
 }
