@@ -1,7 +1,6 @@
 package slimeLand;
 
 public class Warrior {
-    slime slimes = new slime();
     public String name;
     public int hp;
     public int mp;

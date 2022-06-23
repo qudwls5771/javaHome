@@ -101,16 +101,16 @@ public class driver {
                 if (fighting == false) {
                     switch (Level) {
                         case 1:
-                            xp = xp + 4;
+                            xp =+ 4;
                             break;
                         case 2:
-                            xp = xp + 6;
+                            xp =+ 6;
                             break;
                         case 3:
-                            xp = xp + 9;
+                            xp =+ 9;
                             break;
                         case 4:
-                            xp = xp + 12;
+                            xp =+ 12;
                             break;
                     }
                     System.out.println("You earned :" + xp + " xp");

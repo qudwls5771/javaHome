@@ -1,11 +1,16 @@
 package slimeLand;
 
-public class dogM extends slime{
+public class dogM extends Monster{
 
     public dogM(String name, int hp, int mp, int hit, int amor){
         super(name, hp, mp, hit, amor);
         this.hp = hp*10;
         
+    }
+
+    public dogM(String name){
+        this.name = name;
+
     }
 
     
@@ -40,7 +45,7 @@ public class dogM extends slime{
         System.out.println("Name = " + this.name);
         System.out.println("HP = " + this.hp);
         System.out.println("MP = " + this.mp);
-        System.out.println("MP = " + this.amor);
+        System.out.println("amor = " + this.amor);
     }
 
     
@@ -56,6 +61,7 @@ public class dogM extends slime{
 
         }
     }
+
     
 }
 // 인벤토리 

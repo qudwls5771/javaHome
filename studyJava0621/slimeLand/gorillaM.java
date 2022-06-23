@@ -1,12 +1,15 @@
 package slimeLand;
 
-public class gorillaM extends slime{
+public class gorillaM extends Monster{
     public gorillaM(String name, int hp, int mp, int hit, int amor){
         super(name, hp, mp, hit, amor);
         this.hp = hp*30;
     }
 
-    
+    public gorillaM(String nmae){
+        this.name = name;
+
+    }
 
     public void dmg(int dmg) {
         int am_dm = this.amor - dmg;
@@ -23,7 +26,7 @@ public class gorillaM extends slime{
         System.out.println("Name = " + this.name);
         System.out.println("HP = " + this.hp);
         System.out.println("MP = " + this.mp);
-        System.out.println("MP = " + this.amor);
+        System.out.println("amor = " + this.amor);
     }
 
     public int hit() {

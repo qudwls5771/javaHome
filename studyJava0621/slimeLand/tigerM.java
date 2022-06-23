@@ -1,10 +1,14 @@
 package slimeLand;
 
-public class tigerM extends slime{
+public class tigerM extends Monster{
     public tigerM(String name, int hp, int mp, int hit, int amor){
         super(name, hp, mp, hit, amor);
         this.hp = hp *40;
  
+    }
+
+    public tigerM(String name){
+        this.name = name;
     }
 
     
@@ -37,7 +41,7 @@ public class tigerM extends slime{
         System.out.println("Name = " + this.name);
         System.out.println("HP = " + this.hp);
         System.out.println("MP = " + this.mp);
-        System.out.println("MP = " + this.amor);
+        System.out.println("amor = " + this.amor);
     }
 
     
