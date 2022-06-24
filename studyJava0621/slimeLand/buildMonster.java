@@ -10,7 +10,7 @@ public class buildMonster {
         String input = "";
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("용사를 정해주세요");
+        //System.out.println("용사를 정해주세요");
         ArrayList<String> name_S = new ArrayList<>();
         name_S.add("노란 슬라임");
         name_S.add("빨간 슬라임");
@@ -55,42 +55,42 @@ public class buildMonster {
         int count =1;
 
 
-        
+
         
         while(true){
             scan.nextLine();
             switch(count){
                 
                 case 1 :
-                slime slimes = new slime(name_S.get(index_S), 10, 0, 10, 0);
+                slime slimes = new slime(name_S.get(index_S), 100, 0, 10, 0);
                 slimes.info();
                 slimes.dmg(slimes.hit());
                 count++;
                 break;
                 
                 case 2 :
-                dogM dogm = new dogM(name_D.get(index_D), 10, 10, 10, 10);
+                dogM dogm = new dogM(name_D.get(index_D), 150, 0, 30, 10);
                 dogm.info();
                 dogm.dmg(dogm.hit());
                 count++;
                 break;
 
                 case 3 :
-                birdM birdm = new birdM(name_B.get(index_B), 20, 0, 20, 25);
+                birdM birdm = new birdM(name_B.get(index_B), 200, 0, 40, 25);
                 birdm.info();
                 birdm.dmg(birdm.hit());
                 count++;
                 break;
                 
                 case 4 :
-                gorillaM gorillam = new gorillaM(name_G.get(index_G), 30, 0, 30, 30);
+                gorillaM gorillam = new gorillaM(name_G.get(index_G), 300, 0, 60, 30);
                 gorillam.info();
                 gorillam.dmg(gorillam.hit());
                 count++;
                 break;
 
                 case 5 :
-                tigerM tigerm = new tigerM(name_T.get(index_T), 40, 0, 40, 40);
+                tigerM tigerm = new tigerM(name_T.get(index_T), 400, 0, 80, 40);
                 tigerm.info();
                 tigerm.dmg(tigerm.hit());
                 count++;
@@ -101,3 +101,8 @@ public class buildMonster {
     }
 
 }
+
+
+
+
+

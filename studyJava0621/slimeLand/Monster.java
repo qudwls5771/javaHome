@@ -15,14 +15,14 @@ public class Monster {
         
 
     
-    public Monster() {
+/*     public Monster() {
         this.name = "평범한 괴물";
         this.hp = 10;
         this.mp = 0;
         this.hit = 0;
         this.amor = 0;
 
-    }
+    } */
     
     public Monster(String name){
         this.name = name;
@@ -38,16 +38,6 @@ public class Monster {
 
     }
 
-    public void dmg(int dmg) {
-        int am_dm = this.amor - dmg;
-        if(amor > dmg){
-            System.out.println(this.name + "은 " + "miss");
-        }else if (dmg > amor){
-            this.hp = this.hp - Math.abs(am_dm);
-            System.out.println(this.name + "은 " + am_dm + "의 공격을 받았습니다.");
-        }
-    }
-
     public void info() {
         System.out.println("__________" + name + "__________");
         System.out.println("Name = " + this.name);
@@ -56,30 +46,19 @@ public class Monster {
         System.out.println("MP = " + this.amor);
     }
 
-    public int hit() {
-        double random = Math.random();
-        int intValue = (int) (random * 11) + 0;
-        if (intValue > 2) {
-            System.out.println(intValue + "공격에 성공했습니다.");
-        } else {
-            System.out.println("공격에 실패했습니다.");
-            intValue = 0;
-        }
+    public void itemDrab(){
+        ArrayList<item> itemList = new ArrayList<item>();
+        itemList.add(new item(1, "검", 5));
+        itemList.add(new item(2, "활", 10));
 
-        return intValue;
+        for(int i =0; i<itemList.size(); i++){
+            item item_T = itemList.get(i);
+            item_T.showItemInfo();
+        }
+        System.out.println();
     }
 
-    // 죽을 경우에 드랍
-    public void die() {
-        if (this.hp <= 0) {
-            System.out.println(this.name + "이/가 죽었습니다.");
-            this.hp=0;
-        } else {
-            System.out.println("없음");
-
-        }
-    }
-
+   
 
 
    //for -> if -> switch

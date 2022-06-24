@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch main",
             "request": "launch",
+            "mainClass": "studyJava0623.main",
+            "projectName": "javaHome_2e5fed7f"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
             "mainClass": "PACK.main",
             "projectName": "javaHome_2e5fed7f"
         },

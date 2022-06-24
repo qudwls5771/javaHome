@@ -6,28 +6,22 @@ public class gorillaM extends Monster{
         this.hp = hp*30;
     }
 
-    public gorillaM(String nmae){
+/*     public gorillaM(String nmae){
         this.name = name;
 
     }
-
+ */
     public void dmg(int dmg) {
         int am_dm = this.amor - dmg;
         if(amor > dmg){
             System.out.println(this.name + "은 " + "miss");
         }else if (dmg > amor){
             this.hp = this.hp - Math.abs(am_dm);
-            System.out.println(this.name + "은 " + am_dm + "의 공격을 받았습니다.");
+            System.out.println(this.name + "은 " + Math.abs(am_dm) + "의 공격을 받았습니다.");
         }
     }
 
-    public void info() {
-        System.out.println("__________" + name + "__________");
-        System.out.println("Name = " + this.name);
-        System.out.println("HP = " + this.hp);
-        System.out.println("MP = " + this.mp);
-        System.out.println("amor = " + this.amor);
-    }
+
 
     public int hit() {
         double random = Math.random();

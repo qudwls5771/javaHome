@@ -7,9 +7,9 @@ public class birdM extends Monster{
 
     }
 
-    public birdM(String name){
+ /*    public birdM(String name){
         this.name = name;
-    }
+    } */
 
 
 
@@ -20,16 +20,11 @@ public class birdM extends Monster{
             System.out.println(this.name + "은 " + "miss");
         }else if (dmg > amor){
             this.hp = this.hp - Math.abs(am_dm);
-            System.out.println(this.name + "은 " + am_dm + "의 공격을 받았습니다.");
+            System.out.println(this.name + "은 " + Math.abs(am_dm) + "의 공격을 받았습니다.");
         }
     }
-    public void info() {
-        System.out.println("__________" + name + "__________");
-        System.out.println("Name = " + this.name);
-        System.out.println("HP = " + this.hp);
-        System.out.println("MP = " + this.mp);
-        System.out.println("amor = " + this.amor);
-    }
+
+
 
     public int hit() {
         double random = Math.random();
