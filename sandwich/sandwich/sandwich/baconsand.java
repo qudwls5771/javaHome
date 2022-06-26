@@ -20,6 +20,6 @@ public class baconsand extends sandwich{
     }
 
     public void showInfo(){
-        System.out.println(this.bread + " " + this.butter + " " + this.bacon + " " + this.lettuce);
+        System.out.println(this.bread + " " + this.butter + " " + this.bacon + " " + this.lettuce + " : " + "베이컨 샌드위치");
     }
 }

@@ -22,6 +22,6 @@ public class eggsalsand extends sandwich{
     }
 
     public void showInfo(){
-        System.out.println(this.bread + " " + this.butter + " " + this.egg + " " + this.salard);
+        System.out.println(this.bread + " " + this.butter + " " + this.egg + " " + this.salard + " : " + "계란샌드위치");
     }
 }

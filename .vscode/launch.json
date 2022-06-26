@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch abocadosand",
+            "request": "launch",
+            "mainClass": "sandwichs.abocadosand",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "sandwich.Main",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
+            "name": "Launch GorokeTest",
+            "request": "launch",
+            "mainClass": "GorokeTest",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
+            "name": "Launch saesungja",
+            "request": "launch",
+            "mainClass": "saesungja",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
+            "name": "Launch 정사각형",
+            "request": "launch",
+            "mainClass": "정사각형",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "sandwichs.Main",

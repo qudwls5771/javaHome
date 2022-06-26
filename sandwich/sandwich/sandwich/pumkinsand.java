@@ -20,6 +20,6 @@ public class pumkinsand extends sandwich{
     }
 
     public void showInfo(){
-        System.out.println(this.bread + " " + this.butter + " " + this.pumkin);
+        System.out.println(this.bread + " " + this.butter + " " + this.pumkin + " : " + "호박샌드위친");
     }
 }

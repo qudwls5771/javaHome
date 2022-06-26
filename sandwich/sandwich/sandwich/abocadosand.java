@@ -21,6 +21,6 @@ public class abocadosand extends sandwich {
     }
 
     public void showInfo(){
-        System.out.println(this.bread + " " + this.butter + " " + this.egg + " " + this.abocado);
+        System.out.println(this.bread + " " + this.butter + " " + this.egg + " " + this.abocado + " : " + "아보카도 샌드위치");
     }
 }

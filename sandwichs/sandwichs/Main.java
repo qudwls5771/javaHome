@@ -4,13 +4,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] arg) {
-
+    
         ArrayList<mo> moList = new ArrayList<mo>();
+        System.out.println(moList);
 
         for (int i = 0; i < moList.size(); i++) {
             mo moLists = moList.get(i);
             moLists.showItemInfo();
-            moList.get(((int) (Math.random() * (moList.size() - 1))));
+            
 
             if (i == 0) {
                 System.out.println("월요일 샌드위치입니다.");

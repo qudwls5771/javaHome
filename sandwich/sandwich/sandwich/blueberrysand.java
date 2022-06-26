@@ -17,7 +17,7 @@ public class blueberrysand extends sandwich{
     } 
 
     public void showInfo(){
-        System.out.println(this.bread + " " + this.butter + " " + this.egg + " " + this.abocado + " " + this.blueberry);
+        System.out.println(this.bread + " " + this.butter + " " + this.egg + " " + this.abocado + " " + this.blueberry + " : " + "블루베리 샌드위치");
     }
 
  

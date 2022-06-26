@@ -1,7 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "sutdyJava0626",
+        "sandwichs",
         "package0001",
         "pack",
-        "sandwichs"
+        "sandwich/sandwich"
     ]
 }
