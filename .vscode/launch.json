@@ -57,6 +57,20 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+                     "mainClass": "sandwichs.Main",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
+            "name": "Launch mo",
+            "request": "launch",
+            "mainClass": "sandwichs.mo",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "sandwichs.Main",
             "projectName": "javaHome_3092c53"
         },
