@@ -1,4 +1,4 @@
-package sandwich2;
+package sandwichs;
 import java.util.*;
 public class Main {
     public static void main(String[] arg){

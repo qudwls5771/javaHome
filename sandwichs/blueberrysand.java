@@ -1,4 +1,4 @@
-package sandwich2;
+package sandwichs;
 
 public class blueberrysand extends sandwich{
     String blueberry;
