@@ -1,9 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "studyJava0624",
-        "studyJava0621",
         "package0001",
         "pack",
-        "sandwich"
+        "sandwichs"
     ]
 }
