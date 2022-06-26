@@ -1,9 +1,15 @@
 {
     "java.project.sourcePaths": [
+<<<<<<< HEAD
         "sutdyJava0626",
         "sandwichs",
         "package0001",
         "pack",
         "sandwich/sandwich"
+=======
+        "package0001",
+        "pack",
+        "sandwichs"
+>>>>>>> b333bdbf14d240398c56e1ffe435defa162e6a65
     ]
 }
