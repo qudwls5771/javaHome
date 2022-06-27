@@ -36,41 +36,21 @@ public class hero {
         productList[2].ChangeTime = Shot.ChangeTime;
 
         for(int i =0; i<productList.length; i++){
-            System.out.println(productList[i].name);
-            System.out.println(productList[i].AttRange);
-            System.out.println(productList[i].ChangeTime);
+            if(productList[0].hit() > 2){
+               System.out.println("공격");
+               monster.enemyhp -= lance.hit();
+               if(monster.enemyhp <=0){
+                   System.out.println("승리");
+                   
+               }
+           }
+            
         }
    
 
-     /*    ArrayList<Lance> lances = new ArrayList<Lance>();
-        for(int i = 0; i<lances.size(); i++){
-            Lance lan = lances.get(i);
-            lan.hit();
-            System.out.println(lances.get(i));
-        } */
-
+    
              
-        /* if(lance.hit() > 2){
-            System.out.println("공격");
-            monster.enemyhp -= lance.hit();
-            if(monster.enemyhp <=0){
-                System.out.println("승리");
-            }
-        }
-        if(Long.hit() >2){
-            System.out.println("공격");
-            monster.enemyhp -= lance.hit();
-            if(monster.enemyhp <=0){
-                System.out.println("승리");
-            }
-        }
-        if(Shot.hit() >2){
-            System.out.println("공격");
-            monster.enemyhp -= lance.hit();
-            if(monster.enemyhp <=0){
-                System.out.println("승리");
-            }
-        } */
+        
 
     }
 
