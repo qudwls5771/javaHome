@@ -20,15 +20,14 @@ public class main {
         for (int i = 0; i < itemList.size(); i++) {
             item item_T = itemList.get(i);
             item_T.showItemInfo();
-            itemList.get(index((int)(Math.random() * (item_T.size()-1))));
+            
         }
         System.out.println();
 
+       
 
-
-
-
-
+        
+        
 
 
         ArrayList<String> name_T = new ArrayList<>();
@@ -37,7 +36,8 @@ public class main {
         name_T.add("파랑 호랑이");
         name_T.add("초록 호랑이");
         name_T.add("검은 호랑이");
-
+        
+        tigerM tigerm = new tigerM(name_T, 10, 10, 10, 10);
         int index_T = (int)(Math.random() * (name_T.size()-1));
 
 

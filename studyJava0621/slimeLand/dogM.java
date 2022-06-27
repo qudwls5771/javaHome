@@ -52,6 +52,12 @@ public class dogM extends Monster{
         }
     }
 
+    public static void main(String[] args){
+        dogM dogm = new dogM("name",10 , 10, 10, 10);
+        dogm.hit();
+
+    }
+
     
 }
 // 인벤토리 
