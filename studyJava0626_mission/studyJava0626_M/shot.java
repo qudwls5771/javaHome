@@ -2,11 +2,17 @@ package studyJava0626_M;
 
 public class shot extends Waepon{
     shot(){
-        this.name = "숏소드";
+        this.name = "ShotSword";
         this.AttRange = 2;
         this.ChangeTime =3;
       
       
+    }
+
+    shot(String name, int AttRange, int ChangeTime){
+        this.name = "ShotSword";
+        this.AttRange = 2;
+        this.ChangeTime =3;
     }
 
 
@@ -19,13 +25,18 @@ public class shot extends Waepon{
     
     }
 
-       @Override
+    @Override
     public void WaeponC(){
         System.out.println("무기 교체" + super.Dname);
         super.WaeponB(super.Dname);
         attAction();
 
     }
+    @Override
+    public void WaeponB(String name_B){ // 교체하기 전
+        this.name = name_B;
+    }
+    
     public int hit() {
         double r = Math.random();
         int dmg = (int) (r * 20) + 1;
@@ -37,6 +48,8 @@ public class shot extends Waepon{
         }
         return dmg;
     }
+
+
 
    
     

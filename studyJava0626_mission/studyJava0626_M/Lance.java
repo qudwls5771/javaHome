@@ -3,11 +3,18 @@ package studyJava0626_M;
 public class Lance extends Waepon{
 
     Lance(){//매개 변수 없는 생성자 - 인스턴스를 만들면 자동으로 할당
-        this.name = "랜스";
+        this.name = "Lance";
         this.AttRange = 5;
         this.ChangeTime =10;
       
     }
+
+    Lance(String name, int AttRange, int ChangeTime){
+        this.name = "Lance";
+        this.AttRange = 5;
+        this.ChangeTime =10;
+    }
+
 
     @Override
     public void attAction(){
@@ -23,6 +30,10 @@ public class Lance extends Waepon{
         super.WaeponB(super.Dname);
         attAction();
 
+    }
+    @Override
+    public void WaeponB(String name_B){ // 교체하기 전
+        this.name = name_B;
     }
 
     public int hit() {

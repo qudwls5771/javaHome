@@ -2,11 +2,17 @@ package studyJava0626_M;
 
 public class Long extends Waepon {
     Long(){
-         this.name = "롱소드";
+         this.name = "LongSword";
         this.AttRange = 3;
         this.ChangeTime =5;
     
        
+    }
+
+    Long(String name, int AttRange, int ChangeTime){
+        this.name = "LongSword";
+        this.AttRange = 2;
+        this.ChangeTime =3;
     }
 
     @Override
@@ -24,6 +30,11 @@ public class Long extends Waepon {
         attAction();
 
     }
+    @Override
+    public void WaeponB(String name_B){ // 교체하기 전
+        this.name = name_B;
+    }
+
 
 
     public int hit() {

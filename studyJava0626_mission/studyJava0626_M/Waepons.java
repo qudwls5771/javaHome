@@ -1,11 +1,18 @@
 package studyJava0626_M;
 
-public class Waepons {
+public class Waepons extends Waepon{
     public String name;
     public int AttRange;
     public int ChangeTime;
 
     
+    public Waepons(String name, int AttRange, int ChangeTime){
+        this.name = name;
+        this.AttRange = AttRange;
+        this.ChangeTime = ChangeTime;
+      
+    }
+
     public int hit() {
         double r = Math.random();
                             //(이게 랜덤 공격 * 숫자 = 데미지는 늘려주지 최대, 최소값 바뀜) + 0 (최소값)

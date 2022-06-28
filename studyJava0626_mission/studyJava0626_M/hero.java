@@ -14,49 +14,112 @@ public class hero {
     }
 
     public void attack(){
-        Monster monster = new Monster();
-        Lance lance = new Lance();
-        Long Long = new Long();
-        shot Shot = new shot();
+        WaeponT waeponT = new WaeponT();
 
-        Waepons[] productList = new Waepons[3];
-        productList[0] = new Waepons();
-        productList[0].name = lance.name;
-        productList[0].AttRange = lance.AttRange;
-        productList[0].ChangeTime = lance.ChangeTime;
 
-        productList[1] = new Waepons();
-        productList[1].name = Long.name;
-        productList[1].AttRange = Long.AttRange;
-        productList[1].ChangeTime = Long.ChangeTime;
-
-        productList[2] = new Waepons();
-        productList[2].name = Shot.name;
-        productList[2].AttRange = Shot.AttRange;
-        productList[2].ChangeTime = Shot.ChangeTime;
-
-        for(int i =0; i<productList.length; i++){
-            if(productList[0].hit() > 2){
-               System.out.println("공격");
-               monster.enemyhp -= lance.hit();
-               if(monster.enemyhp <=0){
-                   System.out.println("승리");
-                   
-               }
-           }
-            
-        }
-   
-
+        waeponT.coolTime_S();
+        waeponT.coolTime_L();
+        waeponT.coolTime_Lan();
     
              
         
 
     }
 
+    private static void startForIf(){
+        for(int i = 0; i< 6; i++){
+            for(int j = 0; j<6; j++){
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+
+
+    }
+
+    private static void startForIs(){
+        for(int i =0; i< 6; i++){
+            for(int j = 0; j<i+1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+
+
+    private static void startForIss(){
+
+        for(int i =0; i< 6; i++){
+            for(int j = i; j<6; j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+    }
+
+
+    private static void startForIsss(){
+        for(int i = 1; i< 5; i++){
+            for(int j =1; j<5-i; j++ ){
+                System.out.print(" ");
+            }
+            for(int k = 0; k< i*2-1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i = 4; i> 0; i--){
+            for(int j =1; j<5-i; j++ ){
+                System.out.print(" ");
+            }
+            for(int j = 0; j< i*2-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+
+    private static void startForIff(){
+        for(int i = 1; i<5; i++){
+            for(int j =1; j<5-i; j++){
+                System.out.print(" ");
+            }
+            for(int k = 0; k< i*2-1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for(int i = 4; i> 0; i--){
+            for(int j =1; j<5-i; j++ ){
+                System.out.print(" ");
+            }
+            for(int j = 0; j< i*2-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+
+
     public static void main(String[] args){
-        hero Hero = new hero();
-        Hero.attack();
+     //   hero Hero = new hero();
+     //   Hero.attack();
+
+
+        startForIf(); //직사각형
+        startForIs(); //직각삼각형
+        startForIss();  //역삼각형
+        startForIsss(); //마름모
+        //startForIff(); 
     }
 
   
