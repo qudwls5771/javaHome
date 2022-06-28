@@ -14,7 +14,7 @@ public class WaeponT {
 
       // waeponT.coolTime_Attack();
 
-      waeponT.coolTime_Attacks();
+      waeponT.coolTime_Attack();
 
 
     }
@@ -81,18 +81,9 @@ public class WaeponT {
 
         try{ // 공격 순서대로
 
-
-            if(Thread.sleep(3000) == ){
-
-            }
-            lance.start();
-            lance.join();
-
-            longs.start();
-            longs.join();
-
-            shot.start();
-            shot.join();
+            lance.sleep(10000);
+            longs.sleep(5000);
+            shot.sleep(3000);
         } catch (InterruptedException e){
             e.printStackTrace();
         }
@@ -100,23 +91,7 @@ public class WaeponT {
     }
 
 
-    public void coolTime_Attacks(){
-        long startTime = System.currentTimeMillis();
 
-        try{
-            //5초 지연
-            Thread.sleep(5000);
-        }catch(InterruptedException e){
-            e.printStackTrace();
-        }
-
-        long endTime = System.currentTimeMillis();
-
-        System.out.println("Time in milliSeconds" + (endTime - startTime));
-        System.out.println("Time in Seconds" + (endTime - startTime)/1000);
-
-
-
-    }
+    
 
 }
