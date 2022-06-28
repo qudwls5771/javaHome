@@ -16,12 +16,6 @@ public class hero {
     public void attack(){
         WaeponT waeponT = new WaeponT();
 
-
-        waeponT.coolTime_S();
-        waeponT.coolTime_L();
-        waeponT.coolTime_Lan();
-    
-             
         
 
     }
