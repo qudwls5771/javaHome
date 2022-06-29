@@ -16,18 +16,31 @@ public class hero {
     public void attack(){
         WaeponT waeponT = new WaeponT();
 
-        
-
     }
 
-
+    public void getAction(Waepon waepon){
+        waepon.WaeponC();
+        waepon.coolTime_L();
+        waepon.coolTime_S();
+        waepon.coolTime_Lan();
+        
+    }
 
     public static void main(String[] args){
-     //   hero Hero = new hero();
+        
+        hero Hero = new hero();
+        Lance lance = new Lance();
+        Long longs = new Long();
+        shot Shot = new shot();
      //   Hero.attack();
 
+        Hero.getAction(lance);
+        Hero.getAction(longs);
+        Hero.getAction(Shot);
 
+    
     }
+
 
   
 

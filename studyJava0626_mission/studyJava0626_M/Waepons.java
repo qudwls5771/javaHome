@@ -12,7 +12,7 @@ public class Waepons extends Waepon{
         this.ChangeTime = ChangeTime;
       
     }
-
+    @Override
     public int hit() {
         double r = Math.random();
                             //(이게 랜덤 공격 * 숫자 = 데미지는 늘려주지 최대, 최소값 바뀜) + 0 (최소값)

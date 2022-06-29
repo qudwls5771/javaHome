@@ -18,7 +18,7 @@ public class Lance extends Waepon{
 
     @Override
     public void attAction(){
-        System.out.println("무기 : " + this.name + "을 장착");
+        System.out.println("무기 : " + this.name + " 를 장착");
         System.out.println("무기의 범위는 : " + this.AttRange + "입니다.");
         System.out.println("무기의 교체시간은 : " + this.ChangeTime + "초 입니다.");
     
@@ -26,16 +26,18 @@ public class Lance extends Waepon{
 
     @Override
     public void WaeponC(){
-        System.out.println("무기 교체" + super.Dname);
-        super.WaeponB(super.Dname);
+        //System.out.println("무기 교체" + super.Dname);
+        //super.WaeponB(super.Dname);
         attAction();
 
     }
+
     @Override
     public void WaeponB(String name_B){ // 교체하기 전
         this.name = name_B;
     }
 
+    @Override
     public int hit() {
         double r = Math.random();
         int dmg = (int) (r * 20) + 1;
@@ -48,7 +50,27 @@ public class Lance extends Waepon{
         return dmg;
     }
 
+    @Override
+    public void coolTime_Lan() {
+        Waepons[] productList = new Waepons[3];
+        productList[0] = new Waepons("Lance", 5, 10);
 
+        for (int i = 0; i < productList.length; i++) {
+
+            productList[0].hit();
+            System.out.println("Lance Attack = 10초 후 공격 울립니다.");
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        
+
+    }
+
+
+    
 
     
 }

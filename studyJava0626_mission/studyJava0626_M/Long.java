@@ -4,14 +4,14 @@ public class Long extends Waepon {
     Long(){
          this.name = "LongSword";
         this.AttRange = 3;
-        this.ChangeTime =5;
+        this.ChangeTime =3;
     
        
     }
 
     Long(String name, int AttRange, int ChangeTime){
         this.name = "LongSword";
-        this.AttRange = 2;
+        this.AttRange = 3;
         this.ChangeTime =3;
     }
 
@@ -25,8 +25,8 @@ public class Long extends Waepon {
 
     @Override
     public void WaeponC(){
-        System.out.println("무기 교체" + super.Dname);
-        super.WaeponB(super.Dname);
+       // System.out.println("무기 교체" + super.Dname);
+       // super.WaeponB(super.Dname);
         attAction();
 
     }
@@ -35,8 +35,27 @@ public class Long extends Waepon {
         this.name = name_B;
     }
 
+    @Override
+    public void coolTime_L() {
+        Waepons[] productList = new Waepons[3];
+        productList[1] = new Waepons("LongSword", 3, 5);
+    
+        for (int i = 0; i < productList.length; i++) {
+
+            productList[1].hit();
+            System.out.println("Long Sword Attack = 5초 후 공격 울립니다.");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        
+
+    }
 
 
+    @Override
     public int hit() {
         double r = Math.random();
                             

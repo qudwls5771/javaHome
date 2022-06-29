@@ -22,21 +22,7 @@ public class main {
 
     }
 
-    private static void startForIf(){
-        int numX = 6;
-        int nnmY = 7;
-        int numZ = 3;
 
-        for(int i = 0; i< 7; i++){
-            System.out.println("*");
-            for(int j = 0; j<7; j++){
-                System.out.println("*");
-            }
-
-        }
-
-
-    }
 
 
     private static void startPromotion() {

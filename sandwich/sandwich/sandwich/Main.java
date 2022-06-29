@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] arg){
         
-
+        
         ArrayList<pumkinsand> pri = new ArrayList<>();
         pri.add(new pumkinsand("빵", "버터", "호박"));
         for(int i = 0; i<pri.size(); i++){

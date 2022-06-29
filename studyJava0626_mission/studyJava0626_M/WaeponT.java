@@ -4,7 +4,7 @@ import java.awt.Toolkit;
 
 import javax.sql.rowset.spi.SyncResolver;
 
-public class WaeponT {
+public class WaeponT extends Waepon{
     public static void main(String[] args) {
         WaeponT waeponT = new WaeponT();
         
@@ -14,12 +14,15 @@ public class WaeponT {
 
       // waeponT.coolTime_Attack();
 
-      waeponT.coolTime_Attack();
+      
 
 
     }
 
-    public Runnable coolTime_S() {
+
+
+    @Override
+    public void coolTime_S() {
         Waepons[] productList = new Waepons[3];
         productList[2] = new Waepons("ShotSword ", 2, 3);
 
@@ -27,68 +30,55 @@ public class WaeponT {
         for (int i = 0; i < productList.length; i++) {
             // toolkit.beep();
             productList[2].hit();
-            System.out.println("ShotSword Attack = 3초 후 공격 울립니다.");
+            System.out.println("Cool Time : 3초");
             try {
-                Thread.sleep(3000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        return null;
+        
     }
-
-    public Runnable coolTime_L() {
+    @Override
+    public void coolTime_L() {
         Waepons[] productList = new Waepons[3];
         productList[1] = new Waepons("LongSword", 3, 5);
     
         for (int i = 0; i < productList.length; i++) {
 
             productList[1].hit();
-            System.out.println("Long Sword Attack = 5초 후 공격 울립니다.");
+            System.out.println("Cool Time : 5초");
             try {
-                Thread.sleep(5000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        return null;
+        
 
     }
-
-    public Runnable coolTime_Lan() {
+    @Override
+    public void coolTime_Lan() {
         Waepons[] productList = new Waepons[3];
         productList[0] = new Waepons("Lance", 5, 10);
 
         for (int i = 0; i < productList.length; i++) {
 
             productList[0].hit();
-            System.out.println("Lance Attack = 10초 후 공격 울립니다.");
+            System.out.println("Cool Time : 10초");
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        return null;
+        
 
     }
 
-    public void coolTime_Attack(){
-        Thread lance = new Thread(coolTime_Lan());
-        Thread longs = new Thread(coolTime_L());
-        Thread shot = new Thread(coolTime_S());
+  
 
-
-        try{ // 공격 순서대로
-
-            lance.sleep(10000);
-            longs.sleep(5000);
-            shot.sleep(3000);
-        } catch (InterruptedException e){
-            e.printStackTrace();
-        }
-        System.out.println("공격 끝");
-    }
+  
 
 
 
