@@ -2,11 +2,11 @@ package sec08.exam02_abstract_method;
 
 public class Dog extends Animal {
 	public Dog() {
-		this.kind = "Æ÷À¯·ù";
+		this.kind = "í¬ìœ ë¥˜";
 	}
 
 	@Override
 	public void sound() {
-		System.out.println("¸Û¸Û");
+		System.out.println("ë©~!ë©~!");
 	}
 }

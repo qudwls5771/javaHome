@@ -8,7 +8,7 @@ public class WaeponT extends Waepon{
     public static void main(String[] args) {
         WaeponT waeponT = new WaeponT();
         
-       //waeponT.coolTime_S();
+       waeponT.coolTime_S();
        // waeponT.coolTime_Lan();
        // waeponT.coolTime_L();
 

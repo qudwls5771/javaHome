@@ -4,17 +4,24 @@ public class PhoneExample {
 	public static void main(String[] args) {
 		//Phone phone = new Phone(); (x)
 		
-		SmartPhone smartPhone = new SmartPhone("홍길동");
+		// new 인스턴스 해준거임 -> 자식 거 가지고 온거.
+		Phone phone = new SmartPhone("홍길동"); 
+
+		//형변환
+		Phone ph = (SmartPhone) new SmartPhone("홍길동"); 
+
+
+		//Phone phone = new Phone();  - > 추상클래스는 인스턴스시킬 수 없다.
+
 		
-		smartPhone.turnOn();
-		smartPhone.internetSearch();
-		smartPhone.turnOff();
+		//	smartPhone.internetSearch();
+		phone.turnOn();
+		phone.turnOff();
 
+		System.out.println("------형변환-----");
 
-
-		Phone ph = (SmartPhone) new SmartPhone("홍길동");
-
-		ph.internetSearch();
+		ph.turnOff();
+		ph.turnOn();
 
 
 

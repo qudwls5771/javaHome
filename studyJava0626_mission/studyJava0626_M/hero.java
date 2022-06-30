@@ -35,8 +35,8 @@ public class hero {
      //   Hero.attack();
 
         Hero.getAction(lance);
-        Hero.getAction(longs);
-        Hero.getAction(Shot);
+       // Hero.getAction(longs);
+       // Hero.getAction(Shot);
 
     
     }

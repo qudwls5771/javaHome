@@ -8,20 +8,30 @@ public class AnimalExample {
 		cat.sound();
 		System.out.println("-----");
 		
-		//������ �ڵ� Ÿ�� ��ȯ
-		Animal animal = null;
+		//변수의 자동 타입 변환
+		Animal animal = null; // 선언하고 null로 할당하다.
 		animal = new Dog();
 		animal.sound();
 		animal = new Cat();
 		animal.sound();
 		System.out.println("-----");
+
+
+		//
+		//
+		//
+		//
+		//
+		//
+		//
+		//
+		//
+		//
+
+
+
+
+
 		
-		//�Ű������� �ڵ� Ÿ�� ��ȯ
-		animalSound(new Dog());
-		animalSound(new Cat());
-	}
-	
-	public static void animalSound(Animal animal) {
-		animal.sound();
 	}
 }

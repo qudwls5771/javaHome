@@ -97,6 +97,28 @@ public class 도형 {
 
     }
 
+
+
+    private static void smallX() {// 마름모
+        int x = 1;
+        int y = 9;
+
+        for(int i = 1; i<=9; i++){
+            for(int j = 1; j <=9 ; j++){
+                if(x==j || y==j){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            x++;
+            y--;
+            System.out.println();
+        }
+        
+
+    }
+
     public static void main(String[] args) {
         // hero Hero = new hero();
         // Hero.attack();
@@ -106,7 +128,8 @@ public class 도형 {
         // startForIss(); //역삼각형
         // startForIsss(); //마름모
         // startForIff(); //원
-         startForIssss();
+        // startForIssss();
+        smallX();
 
     }
 }
