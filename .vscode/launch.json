@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PhoneExample",
+            "request": "launch",
+            "mainClass": "sec08.exam01_abstract_class.PhoneExample",
+            "projectName": "javaHome_2e5fed7f"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Main",
