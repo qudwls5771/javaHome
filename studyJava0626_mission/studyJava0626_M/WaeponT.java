@@ -1,6 +1,7 @@
 package studyJava0626_M;
 
 import java.awt.Toolkit;
+import java.util.Arrays;
 
 import javax.sql.rowset.spi.SyncResolver;
 
@@ -30,6 +31,7 @@ public class WaeponT extends Waepon{
         for (int i = 0; i < productList.length; i++) {
             // toolkit.beep();
             productList[2].hit();
+            System.out.println(Arrays.deepToString(productList));
             System.out.println("Cool Time : 3초");
             try {
                 Thread.sleep(1000);
@@ -75,6 +77,8 @@ public class WaeponT extends Waepon{
         
 
     }
+
+    
 
   
 

@@ -1,5 +1,7 @@
 package studyJava0626_M;
 
+import java.util.Arrays;
+
 public class Waepons extends Waepon{
     public String name;
     public int AttRange;
@@ -24,6 +26,11 @@ public class Waepons extends Waepon{
             dmg = 0;
         }
         return dmg;
+    }
+
+    public static void main(String[] args){
+        Waepons waepons = new Waepons("name", 4, 3);
+        System.out.println();
     }
  
 
