@@ -23,6 +23,24 @@ public class Waepon {
         this.name = name_B;
     }
 
+    public int hit() {
+        int dmg = 1;
+        if (dmg >= 1) {
+            System.out.println(dmg + "공격에 성공했습니다.");
+        } 
+        return dmg;
+    }
+
+    public void coolTime_S(){
+
+    }
+    public void coolTime_L(){
+
+    }
+    public void coolTime_Lan(){
+        
+    }
+
   
 
 }

@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "studyJava0626_M.Main",
@@ -17,6 +18,19 @@
             "request": "launch",
             "mainClass": "studyJava0626_M.hero",
             "projectName": "javaHome_3092c53"
+=======
+            "name": "Launch PhoneExample",
+            "request": "launch",
+            "mainClass": "sec08.exam01_abstract_class.PhoneExample",
+            "projectName": "javaHome_2e5fed7f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "javaHome_2e5fed7f"
+>>>>>>> 673744d0c5b9e52a7b03262529419b08ba5c3303
         },
         {
             "type": "java",

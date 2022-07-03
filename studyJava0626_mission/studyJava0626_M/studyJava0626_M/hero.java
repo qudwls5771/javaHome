@@ -14,17 +14,11 @@ public class hero {
     }
 
     public void attack(){
-        Monster monster = new Monster();
-        Lance lance = new Lance();
-        Long Long = new Long();
-        shot Shot = new shot();
+        WaeponT waeponT = new WaeponT();
 
-        Waepons[] productList = new Waepons[3];
-        productList[0] = new Waepons();
-        productList[0].name = lance.name;
-        productList[0].AttRange = lance.AttRange;
-        productList[0].ChangeTime = lance.ChangeTime;
+    }
 
+<<<<<<< HEAD:studyJava0626_mission/studyJava0626_M/studyJava0626_M/hero.java
         productList[1] = new Waepons();
         productList[1].name = Long.name;
         productList[1].AttRange = Long.AttRange;
@@ -64,14 +58,31 @@ public class hero {
 
     
              
+=======
+    public void getAction(Waepon waepon){
+        waepon.WaeponC();
+        waepon.coolTime_L();
+        waepon.coolTime_S();
+        waepon.coolTime_Lan();
+>>>>>>> 673744d0c5b9e52a7b03262529419b08ba5c3303:studyJava0626_mission/studyJava0626_M/hero.java
         
-
     }
 
     public static void main(String[] args){
+        
         hero Hero = new hero();
-        Hero.attack();
+        Lance lance = new Lance();
+        Long longs = new Long();
+        shot Shot = new shot();
+     //   Hero.attack();
+
+        Hero.getAction(lance);
+       // Hero.getAction(longs);
+       // Hero.getAction(Shot);
+
+    
     }
+
 
   
 
