@@ -44,6 +44,20 @@ public class hero {
                    
                }
            }
+           if(productList[1].hit() > 2){
+            System.out.println("공격");
+           }monster.enemyhp -= lance.hit();
+           if(monster.enemyhp <=0){
+               System.out.println("승리");
+               
+           }
+           if(productList[2].hit() > 2){
+            System.out.println("공격");
+           }monster.enemyhp -= lance.hit();
+           if(monster.enemyhp <=0){
+               System.out.println("승리");
+               
+           }
             
         }
    

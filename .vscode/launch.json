@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "studyJava0626_M.Main",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
+            "name": "Launch hero",
+            "request": "launch",
+            "mainClass": "studyJava0626_M.hero",
+            "projectName": "javaHome_3092c53"
+        },
+        {
+            "type": "java",
             "name": "Launch abocadosand",
             "request": "launch",
             "mainClass": "sandwichs.abocadosand",
@@ -57,7 +71,7 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
-                     "mainClass": "sandwichs.Main",
+            "mainClass": "sandwichs.Main",
             "projectName": "javaHome_3092c53"
         },
         {
