@@ -1,5 +1,7 @@
 package example_20220701_multi_implement;
 
+import java.util.ArrayList;
+
 public interface RemoteControl {
 
 	//실수
@@ -10,6 +12,8 @@ public interface RemoteControl {
 	void turnOff();
 	void setVolume(int volume);
 	void turn(int turn_T);
+	int channel();
+	void sunho();
 
 	//default 메서드 (static x 인스턴스 없이 실행 불가 o)
 	default void setMute(boolean mute) {
@@ -23,5 +27,5 @@ public interface RemoteControl {
 	static void changeBattery() {
 		System.out.println(" 배터리가 변경되었습니다.");
 	}
-	void channel(int i);
+	
 }

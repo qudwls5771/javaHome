@@ -1,5 +1,7 @@
 package example_20220701_multi_implement;
 
+import java.util.ArrayList;
+
 public class Audio implements RemoteControl {
     private int volume;
 
@@ -28,9 +30,16 @@ public class Audio implements RemoteControl {
 		
 	}
 	@Override
-	public void channel(int i) {
+	public int channel() {
+		// TODO Auto-generated method stub
+		int i = 0;
+
+		return i;	
+	}
+	@Override
+	public void sunho() {
 		// TODO Auto-generated method stub
 		
-	};
+	}
 
 }
