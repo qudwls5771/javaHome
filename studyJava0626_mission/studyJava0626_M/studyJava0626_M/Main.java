@@ -81,9 +81,7 @@ class Main{
             }
             action = sc.nextLine();
 
-            if(action.charAt(0) == 'a'){
-                fighting = 
-            }
+       
 
 
             if(action.charAt(0) == 'i'){

@@ -71,7 +71,9 @@ public class Lance extends Waepon{
 
     public static void main(String[] args){
         Lance lance = new Lance();
-
+        shot shots = new shot();
+        
+        shots.coolTime_s();
         lance.coolTime_Lan();
     }
 
