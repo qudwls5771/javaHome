@@ -14,6 +14,7 @@ public interface RemoteControl {
 	void turn(int turn_T);
 	int channel();
 	void sunho();
+	void Login();
 
 	//default 메서드 (static x 인스턴스 없이 실행 불가 o)
 	default void setMute(boolean mute) {

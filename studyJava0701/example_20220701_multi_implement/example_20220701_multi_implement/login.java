@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class login {
+      static SmartTelevision st = new SmartTelevision();
 
     public static void Login() {
-        SmartTelevision st = new SmartTelevision();
       Map<String, String> loginMap = new HashMap<>();
       //ID할당
       loginMap.put("k", "0000");
@@ -42,6 +42,7 @@ public class login {
     public static void main(String[] args){
         login.Login();
     }
+  
 
   
  
