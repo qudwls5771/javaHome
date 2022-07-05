@@ -1,6 +1,7 @@
 package example_20220701_multi_implement;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -64,33 +65,33 @@ public class SmartTelevision implements RemoteControl, Searchable {
 
 	public void sunho(){
 		//int를 int[]로 변환
-		ArrayList<Integer> sunho = new ArrayList<Integer>();
-		int[] sum = new int[5];
 
- 		for(int i = 0; i<sum.length; i++){
-			sum[i] = this.channel();
-		}
-		
-		for(int i : sum){
-			sunho.add(i);
-		}	
+		//선호채널 
+		//ArrayList<Integer> sunho = new ArrayList<Integer>();
 		//ArrayList<Integer>를 int[]로 바꾼다.
-		int[] nums = sunho.stream().mapToInt(i -> i).toArray();
-		int moNum = 0; // 최빈수
-		int moCnt = 0; // 출현 횟수
-		
-		//
-		for(int i =0; i<5; i++){
-			if(moCnt < nums[i]){
-				moCnt = nums[i];
-				moNum = i;
+		//int[] nums = sunho.stream().mapToInt(i -> i).toArray();
+
+		//ArrayList<Integer>를 int[]로 바꾼다.
+        int arr[] = new int[5];
+        for(int i=0; i<arr.length; i++) {
+            arr[i] = this.channel();
+        }
+		int cnt = 0;
+		for(int i =0; i<arr.length; i++){
+			for(int j = 0; j<arr.length; j++){
+				if(arr[i] == arr[j]){
+					cnt++;
+				}
+			}
+			if(cnt == 3){
+				System.out.println("선호채널 : " + arr[i]);
+				break;
+			}else{
+				System.out.println("선호채널은 3번 이상 같은 채널이 나오면 저장됩니다.");
+				cnt =0;
 			}
 		}
-	
-		System.out.println("현재 선호 채널정보 "+sunho);
-		System.out.println("최빈 수 : " + moNum + " cnt : " + moCnt);
-
-
+		System.out.println(Arrays.toString(arr));
 	}
 
 
