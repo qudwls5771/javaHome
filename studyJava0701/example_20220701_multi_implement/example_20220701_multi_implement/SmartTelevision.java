@@ -1,6 +1,8 @@
 package example_20220701_multi_implement;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
@@ -68,11 +70,30 @@ public class SmartTelevision implements RemoteControl, Searchable {
  		for(int i = 0; i<sum.length; i++){
 			sum[i] = this.channel();
 		}
+		
 		for(int i : sum){
 			sunho.add(i);
 		}	
-			System.out.println("저장한다"+sunho);		
+		//ArrayList<Integer>를 int[]로 바꾼다.
+		int[] nums = sunho.stream().mapToInt(i -> i).toArray();
+		int moNum = 0; // 최빈수
+		int moCnt = 0; // 출현 횟수
+		
+		//
+		for(int i =0; i<5; i++){
+			if(moCnt < nums[i]){
+				moCnt = nums[i];
+				moNum = i;
+			}
+		}
+	
+		System.out.println("현재 선호 채널정보 "+sunho);
+		System.out.println("최빈 수 : " + moNum + " cnt : " + moCnt);
+
+
 	}
+
+
 
 
 	//2.
@@ -108,16 +129,46 @@ public class SmartTelevision implements RemoteControl, Searchable {
 
 	}
 
-	public void Log(login logins){
-		logins.sunho();
-	}
+	public void Login() {
+		Map<String, String> loginMap = new HashMap<>();
+		SmartTelevision st = new SmartTelevision();
+		//ID할당
+		loginMap.put("k", "0000");
+	
+		while (true) {
+		  Scanner sc = new Scanner(System.in);
+  
+		  //ID, PWD입력
+		  System.out.print("ID를 입력하세요 : ");
+		  String id = sc.nextLine();
+		  System.out.print("비밀번호를 입력하세요 : ");
+		  String pw = sc.nextLine();
+		  
+		  //내 ID와PWD를 비교하고 맞으면 로그인
+		  if (!loginMap.containsKey(id)) {
+			System.out.println("입력하신 ID가 존재하지 않습니다.");
+		  } else {
+			if (loginMap.get(id).equals(pw)) {
+			  System.out.println("--------------------");
+			  System.out.println(id + "님, 안녕하세요.");
+			  System.out.println("로그인 되었습니다. :) ");
+			  System.out.println("--------------------");
+			  st.sunho();
+			  return;
+			} else {
+			  System.out.println("비밀번호가 일치하지 않습니다.");
+			}
+		  }
+		}
+		
+	  }
 
 
 	public static void main(String[] args){
 		SmartTelevision st = new SmartTelevision();
-		login logins = new login();
+		
 
-		st.Log(logins);
+		st.Login();
 		
 
 
@@ -135,6 +186,7 @@ public class SmartTelevision implements RemoteControl, Searchable {
 	//인터페이스는 abst어쩌고가 없어도 선언되어야 한다.
 	//상속도 비슷하지만 abst어쩌고가 있으면 자식이 무조건 써야된다.
 	//상속은 부모1 - 자식의 관계가 있다면 무조건 부모1에서만 상속을 받을 수 있다.
+
 
 		
 	
