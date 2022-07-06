@@ -41,5 +41,10 @@ public class Audio implements RemoteControl {
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void Login() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
