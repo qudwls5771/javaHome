@@ -95,6 +95,8 @@ public class SmartTelevision implements RemoteControl, Searchable {
 
 		System.out.println( "현재 회원님의 선호채널" +Arrays.toString(ch_s));
 	}
+	
+
 
 
 
