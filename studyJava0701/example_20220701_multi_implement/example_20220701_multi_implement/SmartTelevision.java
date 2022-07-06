@@ -72,26 +72,28 @@ public class SmartTelevision implements RemoteControl, Searchable {
 		//int[] nums = sunho.stream().mapToInt(i -> i).toArray();
 
 		//ArrayList<Integer>를 int[]로 바꾼다.
-        int arr[] = new int[5];
-        for(int i=0; i<arr.length; i++) {
-            arr[i] = this.channel();
+        int ch_s[] = new int[5];
+        for(int i=0; i<ch_s.length; i++) {
+            ch_s[i] = this.channel();
         }
+
 		int cnt = 0;
-		for(int i =0; i<arr.length; i++){
-			for(int j = 0; j<arr.length; j++){
-				if(arr[i] == arr[j]){
+		for(int i =0; i<ch_s.length; i++){
+			for(int j = 0; j<ch_s.length; j++){
+				if(ch_s[i] == ch_s[j]){
 					cnt++;
 				}
 			}
-			if(cnt == 3){
-				System.out.println("선호채널 : " + arr[i]);
+			if(cnt <= 5){
+				System.out.println("선호채널 : " + ch_s[i]);
 				break;
 			}else{
 				System.out.println("선호채널은 3번 이상 같은 채널이 나오면 저장됩니다.");
 				cnt =0;
 			}
 		}
-		System.out.println(Arrays.toString(arr));
+
+		System.out.println( "현재 회원님의 선호채널" +Arrays.toString(ch_s));
 	}
 
 
