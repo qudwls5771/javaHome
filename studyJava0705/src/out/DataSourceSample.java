@@ -1,4 +1,4 @@
-package out;
+package studyJava0705.src.out;
 /* Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved.*/
 /*
    DESCRIPTION
@@ -82,8 +82,7 @@ public class DataSourceSample {
     public static void printEmployees(OracleConnection connection) throws SQLException {
         // Statement and ResultSet are AutoCloseable and closed automatically.
         try (Statement statement = connection.createStatement()) {
-            try (ResultSet resultSet = statement
-                    .executeQuery("select name, connectinfo from SAVEINFO")) {
+            try (ResultSet resultSet = statement.executeQuery("Select * from saveinfo")) {
                 System.out.println("name" + "  " + "connectinfo");
                 System.out.println("---------------------");
                 while (resultSet.next())
@@ -92,5 +91,6 @@ public class DataSourceSample {
             }
         }
     }
+
 }
 

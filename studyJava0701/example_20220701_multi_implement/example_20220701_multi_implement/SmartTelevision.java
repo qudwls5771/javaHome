@@ -45,8 +45,7 @@ public class SmartTelevision implements RemoteControl, Searchable {
 		int near = 0;  
 		//차이값의 절대값의 최소값을 저장할 변수, 초기값은 정수형에서 최대값
 		int min = Integer.MAX_VALUE;
-		
-			
+
 		for(int i = 0; i< tv_channel.length; i++){
 			int x = Math.abs(tv_channel[i] - target);
 			if(min > x){
@@ -84,7 +83,7 @@ public class SmartTelevision implements RemoteControl, Searchable {
 					cnt++;
 				}
 			}
-			if(cnt <= 5){
+			if(cnt <= 3){
 				System.out.println("선호채널 : " + ch_s[i]);
 				break;
 			}else{

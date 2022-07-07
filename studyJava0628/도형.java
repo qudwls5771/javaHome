@@ -240,7 +240,6 @@ public class 도형 {
             }
           }
 
-          
           if (a < center) {
               start--;
               end++;
@@ -250,8 +249,25 @@ public class 도형 {
           }
 
         }
+        for (int a = center; a < answer; a++) {
+            for (int b = center; b < answer; b++) {
+              if (start <= b && b <= end) {
+                dia[a][b] = '@';
+              } else {
+                dia[a][b] = '-';
+              }
+            }
+  
+            if (a < center) {
+                start--;
+                end++;
+            } else {
+              start++;
+              end--;
+            }
+  
+          }
       
-    
         for (int a = 0; a < answer; a++) {
           for (int b = 0; b < answer; b++) {
             System.out.print(dia[a][b]);
