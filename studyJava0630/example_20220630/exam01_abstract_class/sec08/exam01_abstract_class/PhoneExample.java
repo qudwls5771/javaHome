@@ -1,4 +1,4 @@
-package sec08.exam01_abstract_class;
+package studyJava0630.example_20220630.exam01_abstract_class.sec08.exam01_abstract_class;
 
 public class PhoneExample {
 	public static void main(String[] args) {

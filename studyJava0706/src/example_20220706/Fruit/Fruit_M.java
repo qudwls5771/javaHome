@@ -1,10 +1,10 @@
-package example_20220706.Fruit;
+package studyJava0706.src.example_20220706.Fruit;
 
 import java.io.IOException;
 
 public class Fruit_M {
     public static void main(String[] args) throws IOException {
-        Fruit_E fruit_es = new Fruit_E();
+        example_20220706.Fruit.Fruit_E fruit_es = new example_20220706.Fruit.Fruit_E();
 
         fruit_es.eat_H();
 

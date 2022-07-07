@@ -1,4 +1,4 @@
-package sec08.exam01_abstract_class;
+package studyJava0630.example_20220630.exam01_abstract_class.sec08.exam01_abstract_class;
 
 public abstract class Phone {//추상 클래스 = 인스턴스 X
 	//필드

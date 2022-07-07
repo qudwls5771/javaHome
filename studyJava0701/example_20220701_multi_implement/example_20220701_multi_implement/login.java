@@ -1,4 +1,4 @@
-package example_20220701_multi_implement;
+package studyJava0701.example_20220701_multi_implement.example_20220701_multi_implement;
 
 import java.util.HashMap;
 import java.util.Map;
