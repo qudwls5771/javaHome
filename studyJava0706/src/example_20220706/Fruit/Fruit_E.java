@@ -27,7 +27,5 @@ public class Fruit_E {
         peach.eat("lee");
         mango.eat("jung");
 
-
-
     }
 }

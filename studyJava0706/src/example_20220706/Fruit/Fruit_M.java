@@ -1,4 +1,4 @@
-package studyJava0706.src.example_20220706.Fruit;
+package example_20220706.Fruit;
 
 import java.io.IOException;
 
