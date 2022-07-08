@@ -26,18 +26,29 @@ public class Driver {
 
     public void class_S(){// 고속도로 모드 선택 메소드
         int go = sc.nextInt();
+        //형 변환 인터페이스(Vehicle)를 자식(버스) 형변환
+        Bus bus = (Bus) run_B;
+        //형 변환 인터페이스(highpass)를 자식(버스) 형변환
+        Bus h_B = (Bus) high_B;
+
         switch (go){
             case 1:
                 System.out.println("전문가 모드입니다.");
                 System.out.println("속도는 100Km");
                 System.out.println("1. 고속도로 2. 도로");
                 go_bus();
+                bus.run();
+                times();
+                h_B.exit();
                 break;
             case 2:
                 System.out.println("숙련가 모드입니다.");
                 System.out.println("속도는 60Km");
                 System.out.println("1. 고속도로 2. 도로");
                 go_bus();
+                bus.run();
+                times();
+                h_B.exit();
                 break;
             case 3:
                 System.out.println("초보자 모드입니다.");
@@ -134,9 +145,6 @@ public class Driver {
                 System.out.println("모드를 선택해주세요!");
                 System.out.println("1. 전문가 2. 숙련자 3. 초보자");
                 class_S();
-                bus.run();
-                times();
-                h_B.exit();
                 break;
             case 2:
                 System.out.println("택시를 이용합니다.");
