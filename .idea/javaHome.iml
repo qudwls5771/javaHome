@@ -25,7 +25,9 @@
       <excludeFolder url="file://$MODULE_DIR$/team_P" />
       <excludeFolder url="file://$MODULE_DIR$/textProject" />
       <excludeFolder url="file://$MODULE_DIR$/게임참고" />
+      <excludeFolder url="file://$MODULE_DIR$/studyJava0705" />
     </content>
+    <content url="file://$MODULE_DIR$/studyJava0706/src/example_20220706/exam03_method_polymorphism" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="ojdbc10-full" level="project" />

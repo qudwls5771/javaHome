@@ -1,4 +1,4 @@
-package example_20220706.Fruit;
+package studyJava0706.src.example_20220706.Fruit;
 
 public class Mango implements Fruit, Human {
 

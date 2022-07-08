@@ -1,10 +1,7 @@
 package studyJava0707;
 
 import javax.swing.text.html.HTMLDocument;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class lebo {
@@ -35,6 +32,12 @@ public class lebo {
         List<Object> valueList = map.values()
                 .stream()
                 .collect(Collectors.toList());
+
+
+       // List<String> split = Arrays.asList(str.split(valueList));
+
+
+
 
         System.out.println("Key List: " + keyList);
         System.out.println("Value List: " + valueList);

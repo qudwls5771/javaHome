@@ -1,6 +1,6 @@
-package example_20220706.Fruit;
+package studyJava0706.src.example_20220706.Fruit;
 
-public class Grape implements Fruit, Human{
+public class Grape implements Fruit, Human {
 
     String grape = "포도젤리";
     @Override
