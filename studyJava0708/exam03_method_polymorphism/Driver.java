@@ -24,28 +24,37 @@ public class Driver {
 
 
 
-    public int class_S(){// 고속도로 모드 선택 메소드
+    public void class_S(){// 고속도로 모드 선택 메소드
         int go = sc.nextInt();
         switch (go){
             case 1:
                 System.out.println("전문가 모드입니다.");
                 System.out.println("속도는 100Km");
+                System.out.println("1. 고속도로 2. 도로");
+                go_bus();
                 break;
             case 2:
                 System.out.println("숙련가 모드입니다.");
                 System.out.println("속도는 60Km");
+                System.out.println("1. 고속도로 2. 도로");
+                go_bus();
                 break;
             case 3:
                 System.out.println("초보자 모드입니다.");
                 System.out.println("속도는 30Km");
-                System.out.println("주의사항 : 초보자는 고속도로를 탈 수가 없습니다.");
+                System.out.println("1. 고속도로 2. 도로");
+                go_bus();
+                if(go ==3){
+                    System.out.println("초보자는 고속도로에 들어갈 수 없습니다.");
+                    break;
+                }
                 break;
             default:
                 System.out.println("다시 입력해주시요.");
                 class_S();
                 break;
         }
-        return go;
+        ;
     }
 
     public void go_bus(){ //고속도로 진입 메소드
@@ -86,16 +95,35 @@ public class Driver {
    }
 
     public void go_taxi(){
-        Taxi taxi = (Taxi) run_T;
+
         Taxi h_T = (Taxi) high_T;
-        taxi.run();
+        int go = sc.nextInt();
+        switch (go){
+            case 1:
+                System.out.println("고속도로에 진입합니다.");
+                h_T.highPass();
+                break;
+            case 2:
+                System.out.println("도로에 진입합니다.");
+                break;
+            case 3:
+                exit = -1;
+                System.out.println("프로그램 종료");
+                break;
+            default:
+                System.out.println("다시 입력해주시요.");
+                go_bus();
+                break;
+        }
     }
 
     public void B_T() {
         //형 변환 인터페이스(Vehicle)를 자식(버스) 형변환
         Bus bus = (Bus) run_B;
+        Taxi taxi = (Taxi) run_T;
         //형 변환 인터페이스(highpass)를 자식(버스) 형변환
         Bus h_B = (Bus) high_B;
+        Taxi h_T = (Taxi) high_T;
 
         System.out.println("이용하실 교통수단을 선택해주세요. 1.버스 2.택시 3.종료");
         int go = sc.nextInt();
@@ -106,20 +134,19 @@ public class Driver {
                 System.out.println("모드를 선택해주세요!");
                 System.out.println("1. 전문가 2. 숙련자 3. 초보자");
                 class_S();
-                if(class_S() == 1){
-                    System.out.println("1.고속도로 진입 2. 도로진입");
-                    go_bus();
-                }else{
-                    System.out.println("초보자는 고속도로를 이용할 수 없습니다.");
-                    break;
-                }
                 bus.run();
                 times();
                 h_B.exit();
                 break;
             case 2:
                 System.out.println("택시를 이용합니다.");
-                go_taxi();
+                taxi.run();
+                System.out.println("모드를 선택해주세요!");
+                System.out.println("1. 전문가 2. 숙련자 3. 초보자");
+                class_S();
+                taxi.run();
+                times();
+                h_T.exit();
                 break;
             case 3:
                 exit = -1;

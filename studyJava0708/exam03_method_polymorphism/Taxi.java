@@ -16,5 +16,5 @@ public class Taxi implements Vehicle, highPass {
 	public void exit() {
 		System.out.println(this.name + "가 하이패스 구간을 나옵니다.");
 		System.out.println("하이패스 종료");
-	}
+    }
 }
