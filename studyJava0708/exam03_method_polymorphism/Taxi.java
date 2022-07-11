@@ -1,6 +1,6 @@
 package studyJava0708.exam03_method_polymorphism;
 
-public class Taxi implements Vehicle, highPass {
+public class Taxi implements Vehicle, hiPass {
 	String name = "택시";
 	@Override
 	public void run() {

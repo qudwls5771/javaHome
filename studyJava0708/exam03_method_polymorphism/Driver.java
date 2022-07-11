@@ -11,7 +11,7 @@ public class Driver {
         vehicle.run();
     }
 
-    public void high(highPass highpass) {
+    public void high(hiPass highpass) {
         highpass.highPass();
     }
 
@@ -19,8 +19,8 @@ public class Driver {
     Vehicle run_B = new Bus();
     Vehicle run_T = new Taxi();
     // 인터페이스 = 버스, 택시 객체 선언
-    highPass high_B = new Bus();
-    highPass high_T = new Taxi();
+    hiPass high_B = new Bus();
+    hiPass high_T = new Taxi();
 
 
 
