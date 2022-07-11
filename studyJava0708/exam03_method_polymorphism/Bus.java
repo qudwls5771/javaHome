@@ -9,6 +9,11 @@ public class Bus implements Vehicle, hiPass {
 	}
 
 	@Override
+	public void Tiers() {
+
+	}
+
+	@Override
 	public void highPass() {
 		System.out.println(this.name + "는 하이패스 무료입니다.");
 	}

@@ -1,18 +1,25 @@
 package studyJava0708.exam03_method_polymorphism;
 
+import java.lang.reflect.Method;
+
 public class DriverExample {
 	public static void main(String[] args) {
 		Driver driver = new Driver();
 		Bus bus = new Bus();
 		Taxi taxi = new Taxi();
-		
-	//	driver.drive(bus);
-	//	driver.drive(taxi);
-	//	driver.high(bus);
-		//driver.high(taxi);
 
 		driver.B_T();
+
+		Vehicle taxi1 = new Taxi();
+		Vehicle bus1 = new Bus();
+
+
+
+
+
 	}
+
+
 }
 
 //버스와 택시에 인터페이스를 추가 (인터페이스의 다양성을 추가해서 기능 강제성 구현)
@@ -27,5 +34,6 @@ public class DriverExample {
 // 고속도로를 달리세요. 톨게이트를 빠져나가면 초보자로 바꾸는 드라이버가 있습니다.
 // (기본)형변환을 통해 System.out.println로 천안에서 고속도로 타고 서울까지 가는 문구를
 // 출력하시오.
+
 
 //추상 클래스와 인터페이스를 왜!? 쓰는지와 어떤 경우에 쓰는지 고민
