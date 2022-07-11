@@ -90,6 +90,7 @@ public class Driver {
                 break;
         }
     }
+    //천안 ~ 서울 가는 거 시각적?으로 보이기 위해 TimeUint걸어둠
    public void times(){
        try{
            for(int i = 0; i<5; i++){
