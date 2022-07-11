@@ -19,6 +19,6 @@ public class Bus implements Car, hiPass{
 
     @Override
     public void exit() {
-
+        System.out.println(this.name + "하이패스를 나옵니다.");
     }
 }

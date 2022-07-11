@@ -1,5 +1,5 @@
 public class Expert implements Car {
-    String name = "마스터";
+    String name = "전문가";
     @Override
     public void run() {}
 
