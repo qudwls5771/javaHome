@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+
+//절차지향임 -> 객체지향으로 바꿔야댐
 public class Driver {
     Scanner sc = new Scanner(System.in);
         int exit = 0;
@@ -87,13 +89,11 @@ public class Driver {
     hiPass hi_B = new Bus();
     hiPass hi_T = new Taxi();
 
-    public int Mod(){
+    public void Mod(){
         int choice = sc.nextInt();
-        int reNum = this.B_T();
-
         switch (choice){
             case 1 :
-                if(reNum == 1){
+                if(choice == 1){
                     Tiers(tier_E);
                     System.out.println("1. 고속도로 2. 도로");
                     Roads();
@@ -101,7 +101,7 @@ public class Driver {
                     hipass_Exit(hi_B);
                     System.out.println("도시진입 초보자 모드로 전환합니다.");
                     Tiers(tier_N);
-                }else if(reNum == 2){
+                }else if(choice ==2){
                     Tiers(tier_E);
                     System.out.println("1. 고속도로 2. 도로");
                     Roads();
@@ -112,13 +112,13 @@ public class Driver {
                 }
                 break;
             case 2 :
-                if(reNum == 1){
+                if(choice == 1){
                     Tiers(tier_P);
                     System.out.println("1. 고속도로 2. 도로");
                     Roads();
                     times();
                     hipass_Exit(hi_B);
-                }else if(reNum==2){
+                }else if(choice==2){
                     Tiers(tier_P);
                     System.out.println("1. 고속도로 2. 도로");
                     Roads();
@@ -144,13 +144,11 @@ public class Driver {
                 Mod();
                 break;
         }
-        return choice;
     }
 
-    public int B_T() {
-        System.out.println("이용하실 교통수단을 선택해주세요. 1. 버스 2. 택시 3.종료");
+    public void B_T() {
         int go = sc.nextInt();
-        int reNum = go;
+        System.out.println("이용하실 교통수단을 선택해주세요. 1. 버스 2. 택시 3.종료");
         switch (go) {
             case 1:
                 System.out.println("버스를 이용합니다.");
@@ -178,7 +176,7 @@ public class Driver {
                 break;
 
         }
-        return reNum;
+
     }
 
 
