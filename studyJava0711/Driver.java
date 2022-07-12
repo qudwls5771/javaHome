@@ -90,6 +90,7 @@ public class Driver {
     public int Mod(){
         int choice = sc.nextInt();
         int reNum = this.B_T();
+
         switch (choice){
             case 1 :
                 if(reNum == 1){
@@ -100,7 +101,7 @@ public class Driver {
                     hipass_Exit(hi_B);
                     System.out.println("도시진입 초보자 모드로 전환합니다.");
                     Tiers(tier_N);
-                }else if(reNum ==2){
+                }else if(reNum == 2){
                     Tiers(tier_E);
                     System.out.println("1. 고속도로 2. 도로");
                     Roads();
