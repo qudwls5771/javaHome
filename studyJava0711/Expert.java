@@ -1,4 +1,4 @@
-public class Expert implements Car {
+public class Expert implements car {
     String name = "전문가";
     @Override
     public void run() {}

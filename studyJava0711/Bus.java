@@ -1,4 +1,4 @@
-public class Bus implements Car, hiPass{
+public class Bus implements car, hiPass{
 
     String name = "버스";
 

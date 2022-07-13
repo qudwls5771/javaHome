@@ -1,4 +1,4 @@
-public class Novice implements Car{
+public class Novice implements car {
     String name = "초보자";
     @Override
     public void run() {}

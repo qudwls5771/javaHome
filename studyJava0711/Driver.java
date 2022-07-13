@@ -31,7 +31,7 @@ public class Driver {
     }
 
     //전문가, 숙련자, 초보자 모드 
-    public void Tiers(Car c) {
+    public void Tiers(car c) {
         if (c instanceof Expert) {
             Expert expert = (Expert) c;
             expert.Tier();
@@ -82,9 +82,9 @@ public class Driver {
         }
 
     }
-    Car tier_E = new Expert();
-    Car tier_P = new Pro();
-    Car tier_N = new Novice();
+    car tier_E = new Expert();
+    car tier_P = new Pro();
+    car tier_N = new Novice();
 
     hiPass hi_B = new Bus();
     hiPass hi_T = new Taxi();

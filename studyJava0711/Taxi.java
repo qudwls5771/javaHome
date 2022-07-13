@@ -1,4 +1,4 @@
-public class Taxi implements Car, hiPass{
+public class Taxi implements car, hiPass{
     String name = "택시";
     @Override
     public void run() {

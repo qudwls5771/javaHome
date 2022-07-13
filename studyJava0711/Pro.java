@@ -1,4 +1,4 @@
-public class Pro implements Car{
+public class Pro implements car {
     String name = "숙련자";
     @Override
     public void run() {}
