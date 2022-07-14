@@ -100,6 +100,11 @@ public class buildMonster {
         }
     }
 
+    public static void main(String[] args){
+        buildMonster buildMonsters = new buildMonster();
+        buildMonsters.buildMonster();
+    }
+
 }
 
 

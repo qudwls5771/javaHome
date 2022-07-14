@@ -34,7 +34,7 @@ public class WaeponT extends Waepon{
             System.out.println(Arrays.deepToString(productList));
             System.out.println("Cool Time : 3초");
             try {
-                Thread.sleep(1000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
