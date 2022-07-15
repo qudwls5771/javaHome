@@ -59,8 +59,7 @@ public class buildMonster {
         
         while(true){
             scan.nextLine();
-            switch(count){
-                
+            switch(count){     
                 case 1 :
                 slime slimes = new slime(name_S.get(index_S), 100, 0, 10, 0);
                 slimes.info();
@@ -99,11 +98,12 @@ public class buildMonster {
             }
         }
     }
-
     public static void main(String[] args){
         buildMonster buildMonsters = new buildMonster();
         buildMonsters.buildMonster();
     }
+
+   
 
 }
 
