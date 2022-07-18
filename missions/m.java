@@ -11,5 +11,6 @@ public class m {
             mn = b < mx ? d : c;
         }
         System.out.println("정답"+mn);
+        System.out.println("정답"+mn);
     }
 }
