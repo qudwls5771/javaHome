@@ -59,6 +59,7 @@ public class WaeponT extends Waepon{
         
 
     }
+    //무기 쿨타임
     @Override
     public void coolTime_Lan() {
         Waepons[] productList = new Waepons[3];
