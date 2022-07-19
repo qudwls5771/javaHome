@@ -1,3 +1,5 @@
+package studyJava0711;
+
 public class Bus implements car, hiPass{
 
     String name = "버스";
