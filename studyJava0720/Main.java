@@ -16,5 +16,7 @@ public class Main {
             //다를 때 불일치를 출력
         }
 
+        System.out.println("Hello world");
+
     }
 }
