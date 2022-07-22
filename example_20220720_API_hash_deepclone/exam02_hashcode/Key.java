@@ -50,6 +50,8 @@ public class Key {
 	public int hashCode() {
 		//2300 +23 = 2323으로 나옴
 		// return number+enc;
+		//String 문자열은 상수풀이기 때문에 같은 주소를 가르킬 것이고
+
 		return number;
 	}
 }
