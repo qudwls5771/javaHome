@@ -51,7 +51,7 @@ public class Key {
 		//2300 +23 = 2323으로 나옴
 		// return number+enc;
 		//String 문자열은 상수풀이기 때문에 같은 주소를 가르킬 것이고
-
+		//같은 주소이면 hashCode가 동일하게 return을 받는다.
 		return number;
 	}
 }
