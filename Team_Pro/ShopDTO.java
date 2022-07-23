@@ -1,15 +1,15 @@
-public class study {
-    private int code; // 가게코드
+public class ShopDTO {
+    private Integer code; // 가게코드
     private String name; //가게이름
     private String address; // 가게주소
-    private int price; //가격
+    private Integer price; //가격
     private String picture; // 가게사진
 
-    public study(){
+    public ShopDTO(){
         super();
     }
 
-    public study(int code, String name, String address, int price, int picture){
+    public ShopDTO(Integer code, String name, String address, Integer price, String picture){
         super();
         this.code = code;
         this.name = name;
@@ -18,11 +18,11 @@ public class study {
         this.picture = picture;
     }
 
-    public int getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 
@@ -42,11 +42,11 @@ public class study {
         this.address = address;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
@@ -57,6 +57,7 @@ public class study {
     public void setPicture(String picture) {
         this.picture = picture;
     }
-    
+
+   
 
 }
