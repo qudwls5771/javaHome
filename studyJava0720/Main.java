@@ -1,6 +1,7 @@
 public class Main {
 
     public static void main(String[] args){
+
         Student Kim = new Student("Kim", 1);
         Student Kim_1 = new Student("Kim", 2);
         Student Lee = new Student("Kim", 3);

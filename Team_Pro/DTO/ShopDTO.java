@@ -1,3 +1,5 @@
+package DTO;
+
 public class ShopDTO {
     private Integer code; // 가게코드
     private String name; //가게이름

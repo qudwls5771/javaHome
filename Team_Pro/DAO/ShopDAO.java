@@ -1,3 +1,10 @@
+package DAO;
+
+import DTO.ShopDTO;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class ShopDAO {
 
     List<ShopDTO> shopDTO = new ArrayList<ShopDTO>();
@@ -7,6 +14,10 @@ public class ShopDAO {
     public static ShopDAO getInstancce(){
         return instance;
     }
+
+
+
+
 
     
 }
