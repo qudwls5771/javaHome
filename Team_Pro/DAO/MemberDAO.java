@@ -151,6 +151,61 @@ public class MemberDAO {
         return mdao;
     }
 
+    public boolean idSearch(String id) {
+        boolean flag = false;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try {
+            String sql = "select * from shopm where id = ?";
+         //   conn = DBManager.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, id);
+
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                flag = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+       //     DBManager.close(conn, pstmt, rs);
+        }
+
+        return flag;
+    }
+
+    public String ForgetLogin(MemberDTO mVo) {
+        String sql = "select * from shopm where id=?";
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        String pwd = "x";
+        try {
+           // conn = DBManager.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, mVo.getId());
+            rs = pstmt.executeQuery(); // 빈괄호
+            if (rs.next()) {
+                pwd = rs.getString("pwd");
+                return pwd;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (pstmt != null)
+                    pstmt.close();
+                if (conn != null)
+                    conn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return pwd;
+    }
+
 
 
 
