@@ -15,6 +15,9 @@ public class ShopDAO {
         return instance;
     }
 
+    public void insert_S(ShopDTO s){
+        String sql = "insert into shopping values()";
+    }
 
 
 

@@ -4,6 +4,7 @@ import DTO.MemberDTO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class MemberDAO {
 
@@ -42,7 +43,7 @@ public class MemberDAO {
         }
 
     }
-    public void update(MemberDTO m){
+    public void update(MemberDTO m){ //회원정보 수정
         String sql = "update member set pwd =?, name =?, year =?" +
                 ", phone_n =?, address =?, dog_T =?, dog_S = ?, dog_D =?";
         Connection conn = null;
@@ -111,6 +112,45 @@ public class MemberDAO {
             }
         } // finally의 끝
     }
+    public MemberDTO accountLogin(MemberDTO m){
+        MemberDTO mdao = null;
+        String sql = "select * from member where id =?, pww =?";
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try{
+            //conn = 디비.getConnection();
+            //pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, m.getId());
+            pstmt.setString(2, m.getPwd());
+            //rs = pstmt.executeQuery(); //빈괄호
+            if(rs.next()){
+             mdao = new MemberDTO();
+             mdao.setId(rs.getString("id"));
+             mdao.setPwd(rs.getString("pwd"));
+             mdao.setName(rs.getString("name"));
+             mdao.setYear(rs.getString("year"));
+             mdao.setPhone_N(rs.getString("phone_n"));
+             mdao.setAddress(rs.getString("address"));
+             mdao.setDog_T(rs.getString("dog_T"));
+             mdao.setDog_S(rs.getString("dog_s"));
+             mdao.setDog_D(rs.getString("dog_T"));
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        } finally {
+            try {
+                if (pstmt != null)
+                    pstmt.close();
+                if (conn != null)
+                    conn.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return mdao;
+    }
+
 
 
 
