@@ -1,7 +1,7 @@
 package DTO;
 
 public class ShopDTO {
-    private Integer code; // 가게코드
+    private Integer code_s; // 가게코드
     private String name; //가게이름
     private String address; // 가게주소
     private Integer price; //가격
@@ -11,21 +11,21 @@ public class ShopDTO {
         super();
     }
 
-    public ShopDTO(Integer code, String name, String address, Integer price, String picture){
+    public ShopDTO(Integer code_s, String name, String address, Integer price, String picture){
         super();
-        this.code = code;
+        this.code_s = code_s;
         this.name = name;
         this.address = address;
         this.price = price;
         this.picture = picture;
     }
 
-    public Integer getCode() {
-        return code;
+    public Integer getCode_s() {
+        return code_s;
     }
 
-    public void setCode(Integer code) {
-        this.code = code;
+    public void setCode_s(Integer code_s) {
+        this.code_s = code_s;
     }
 
     public String getName() {
@@ -59,7 +59,4 @@ public class ShopDTO {
     public void setPicture(String picture) {
         this.picture = picture;
     }
-
-   
-
 }

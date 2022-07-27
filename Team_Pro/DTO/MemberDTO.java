@@ -10,9 +10,9 @@ public class MemberDTO {
     private String Year; //생년월일은 일단 String
     private String Phone_N; //폰번
     private String address; //주소
-    private String dog_T;  //강아지 종류
-    private String dog_S; //강아지 성별
-    private String dog_D; //강아지 생년월일
+    private String pet_T;  //강아지 종류
+    private String pet_S; //강아지 성별
+    private String pet_D; //강아지 생년월일
 
     public MemberDTO(){}
 
@@ -22,16 +22,16 @@ public class MemberDTO {
     }
 
     public MemberDTO(String id2, String pwd2, String name1, String Year1,
-                     String phone_N1, String address1, String dog_T1, String dog_S1, String dog_D1){
+                     String phone_N1, String address1, String pet_T1, String pet_S1, String pet_D1){
         this.id = id2;
         this.pwd = pwd2;
         this.name = name1;
         this.Year = Year1;
         this.Phone_N = phone_N1;
         this.address = address1;
-        this.dog_T = dog_T1;
-        this.dog_S = dog_S1;
-        this.dog_D = dog_D1;
+        this.pet_T = pet_T1;
+        this.pet_S = pet_S1;
+        this.pet_D = pet_D1;
     }
 
 
@@ -83,28 +83,27 @@ public class MemberDTO {
         this.address = address;
     }
 
-    public String getDog_T() {
-        return dog_T;
+    public String getPet_T() {
+        return pet_T;
     }
 
-    public void setDog_T(String dog_T) {
-        this.dog_T = dog_T;
+    public void setPet_T(String pet_T) {
+        this.pet_T = pet_T;
     }
 
-    public String getDog_S() {
-        return dog_S;
+    public String getPet_S() {
+        return pet_S;
     }
 
-    public void setDog_S(String dog_S) {
-        this.dog_S = dog_S;
+    public void setPet_S(String pet_S) {
+        this.pet_S = pet_S;
     }
 
-    public String getDog_D() {
-        return dog_D;
+    public String getPet_D() {
+        return pet_D;
     }
 
-    public void setDog_D(String dog_D) {
-        this.dog_D = dog_D;
+    public void setPet_D(String pet_D) {
+        this.pet_D = pet_D;
     }
-
 }
