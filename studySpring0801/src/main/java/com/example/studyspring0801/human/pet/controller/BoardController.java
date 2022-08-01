@@ -1,7 +1,7 @@
 package com.example.studyspring0801.human.pet.controller;
 
 import com.example.studyspring0801.human.pet.Board;
-import com.human.pet.Board;
+import com.example.studyspring0801.human.pet.Board;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

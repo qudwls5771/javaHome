@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="favicon" href="/static/img/ico/favicon.ico">
+    <title>Title</title>
+</head>
+<body>
+    hello world
+    <a href="/getBoardList">게시판!</a>
+    <a href="/hello">hello!</a>
+    <a href="/account">account!</a>
+    <a href="https://naver.com">naver</a>
+    <hr>
+    <!----------------->
+    <p th:text="${msg}"></p>
+    <hr>
+    Slime Game
+    <hr>
+    <h1>회원가입</h1>
+    <form method="POST" action="/account">
+<!--        <form method="POST" action="/index">-->
+        <!------input태그의 id1변수이름으로 데이터를 서버에 전달하고------>
+        <!------서버 model에서 받아온 id2변수이름으로 데이터를 html에 출력------>
+        <input type="text" name="id1" th:value="${id2}" />
+        <input type="submit" value="Click" />
+    </form>
+
+</body>
+</html>

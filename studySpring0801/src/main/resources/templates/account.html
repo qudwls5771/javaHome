@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <!-- 타임리프 템플릿을 통해서 controller(자바)에서 받아온 데이터를
+    HTML문서에 적용시킨 뒤에 "완성된" HTML파일만 클라이언트 전달
+    -->
+    <p th:text="${msg}">wait</p>
+    <form method="POST" action="/account">
+        <!------input태그의 id1변수이름으로 데이터를 서버에 전달하고------>
+        <!------서버 model에서 받아온 id2변수이름으로 데이터를 html에 출력------>
+        <input type="text" name="id1" th:value="${id2}" />
+        <input type="submit" value="Click" />
+    </form>
+</body>
+</html>
