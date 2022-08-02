@@ -24,7 +24,7 @@ public class BoardController {
             Board board = new Board();
             //롬북으로 자동생성된 seter 메서드로 데이터 입력
             board.setSeq(new Long(i));
-            board.setTitle("게시판 프로그램 테스트"+i);
+            board.setTitle("게시판 테스트"+i);
             board.setWriter("도우너");
             board.setContent("게시판 프로그램 테스트입니다...");
             board.setCreateDate(new Date());
